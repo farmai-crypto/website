@@ -62,7 +62,7 @@ export default function Header(props) {
     [classes.fixed]: fixed
   });
   const brandComponent = (
-    <Link href="/components" as="/components">
+    <Link href="/" as="/">
       <Button className={classes.title}>{brand}</Button>
     </Link>
   );
@@ -126,7 +126,8 @@ Header.propTypes = {
     "transparent",
     "white",
     "rose",
-    "dark"
+    "dark",
+    "farmai"
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,

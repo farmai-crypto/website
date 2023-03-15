@@ -42,6 +42,7 @@ Router.events.on("routeChangeError", () => {
   document.body.classList.remove("body-page-transition");
 });
 
+
 export default class MyApp extends App {
   componentDidMount() {
     let comment = document.createComment(`
@@ -82,7 +83,7 @@ export default class MyApp extends App {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <title>NextJS Material Kit by Creative Tim</title>
+          <title>FarmAI</title>
         </Head>
         <Component {...pageProps} />
       </React.Fragment>

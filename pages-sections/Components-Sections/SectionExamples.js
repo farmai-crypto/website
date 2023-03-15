@@ -21,8 +21,7 @@ export default function SectionExamples() {
       <div className={classes.container}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={6}>
-            <Link href="/landing">
-              <a className={classes.link}>
+            <Link href="/landing" className={classes.link}>
                 <img
                   src="/img/landing.jpg"
                   alt="..."
@@ -37,12 +36,10 @@ export default function SectionExamples() {
                 <Button color="primary" size="lg" simple>
                   View landing page
                 </Button>
-              </a>
             </Link>
           </GridItem>
           <GridItem xs={12} sm={12} md={6}>
-            <Link href="/profile">
-              <a className={classes.link}>
+            <Link href="/profile" className={classes.link}>
                 <img
                   src="/img/profile.jpg"
                   alt="..."
@@ -57,7 +54,6 @@ export default function SectionExamples() {
                 <Button color="primary" size="lg" simple>
                   View profile page
                 </Button>
-              </a>
             </Link>
           </GridItem>
         </GridContainer>
