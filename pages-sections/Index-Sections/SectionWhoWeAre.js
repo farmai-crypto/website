@@ -31,7 +31,7 @@ export default function SectionWhoWeAre() {
   const classes = useStyles();
   
   return (
-    <Grid container>
+    <Grid container justify="center">
       <Grid item>
         <h2 id="who-we-are" className={classes.title}>Who we are</h2>
       </Grid>

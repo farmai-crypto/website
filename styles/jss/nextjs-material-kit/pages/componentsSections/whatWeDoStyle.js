@@ -5,11 +5,13 @@ const whatWeDoStyle = {
   sections: {
     padding: "70px 0"
   },
-  container,
-  title: {
+  container: {
     paddingTop: "80px",
+  },
+  title: {
     minHeight: "32px",
-    textDecoration: "none"
+    textDecoration: "none",
+    textAlign: "center"
   },
   space50: {
     height: "50px",
