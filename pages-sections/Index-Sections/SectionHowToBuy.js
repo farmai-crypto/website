@@ -24,7 +24,6 @@ import Badge from "/components/Badge/Badge.js";
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/howToBuyStyle.js";
 import { Grid, Typography } from "@material-ui/core";
-import { SwapWidget } from "@uniswap/widgets";
 
 const useStyles = makeStyles(styles);
 
@@ -36,6 +35,7 @@ import Build from "@material-ui/icons/Build";
 import Marketing from "/public/img/cards/marketing.svg";
 import CustomTabs from "/components/CustomTabs/CustomTabs.js";
 import FarmAICard from "../../components/Card/FarmAICard";
+import UniswapWidget from "../../components/web3/UniswapWidget";
 
 const Tokenomics = () => {
   const classes = useStyles();
@@ -115,10 +115,10 @@ export default function SectionHowToBuy() {
       <Grid item xs={12}>
         <h2 id="how-to-buy" className={classes.title}>How to buy</h2>
       </Grid>
-      <Grid item xs={4} justify="center">
-        <SwapWidget />
+      <Grid item xs={4}>
+        <UniswapWidget />
       </Grid>
-      <Grid item xs={12} justify="center">
+      <Grid item xs={12}>
         <Typography variant="body1" style={{textAlign: "center"}}>Uniswap exchange</Typography>
       </Grid>
       <Grid item container xs={12} spacing={2} justify="space-between">

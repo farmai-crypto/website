@@ -39,7 +39,7 @@ export default function SectionWhatWeDo() {
         <h2 id="what-we-do" className={classes.title}>Farming meets AI</h2>
       </Grid>
       <Grid item container sm={6} xs={12} justify="flex-end">
-        <Image src={farmingHands} width={300} />
+        <Image src={farmingHands} width={300} alt="farming-hands" />
       </Grid>
       <Grid item sm={6} xs={12}>
         <Typography variant="body1">
