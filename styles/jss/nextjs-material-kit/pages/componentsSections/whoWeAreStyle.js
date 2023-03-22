@@ -9,7 +9,8 @@ const whatWeDoStyle = {
   title: {
     paddingTop: "80px",
     minHeight: "32px",
-    textDecoration: "none"
+    textDecoration: "none",
+    fontSize: "3rem"
   },
   space50: {
     height: "50px",

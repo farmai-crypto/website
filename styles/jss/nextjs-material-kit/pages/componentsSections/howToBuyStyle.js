@@ -10,7 +10,8 @@ const whatWeDoStyle = {
     paddingTop: "80px",
     minHeight: "32px",
     textDecoration: "none",
-    textAlign: "center"
+    textAlign: "center",
+    fontSize: "3rem"
   },
   space50: {
     height: "50px",
