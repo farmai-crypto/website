@@ -9,7 +9,8 @@ const whatWeDoStyle = {
   title: {
     paddingTop: "80px",
     minHeight: "32px",
-    textDecoration: "none"
+    textDecoration: "none",
+    fontSize: "4rem"
   },
   space50: {
     height: "50px",
@@ -23,6 +24,9 @@ const whatWeDoStyle = {
     width: "17px",
     height: "17px",
     color: "#FFFFFF"
+  },
+  socialIcons: {
+    fontSize: "4rem"
   },
   ...customCheckboxRadioSwitch
 };

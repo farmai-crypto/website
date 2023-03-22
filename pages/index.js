@@ -77,13 +77,12 @@ export default function Index(props) {
       </Parallax>
 
       <Grid container justify="center">
-        <Grid item sm={8} xs={11} className={classNames(classes.main, classes.mainRaised)}>
+        <Grid item lg={10} xs={11} className={classNames(classes.main, classes.mainRaised)}>
           <Grid container justify="center">
             <Grid item xs={10}>
               <SectionWhatWeDo />
               <SectionHowToBuy />
               <SectionWhoWeAre />
-              <SectionServices />
               <SectionSocials />
               <SectionBasics />
               <SectionNavbars />

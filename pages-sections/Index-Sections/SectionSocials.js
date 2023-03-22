@@ -21,9 +21,11 @@ import CustomInput from "/components/CustomInput/CustomInput.js";
 import CustomLinearProgress from "/components/CustomLinearProgress/CustomLinearProgress.js";
 import Paginations from "/components/Pagination/Pagination.js";
 import Badge from "/components/Badge/Badge.js";
+import { Telegram, Twitter } from "@material-ui/icons";
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/whatWeDoStyle.js";
 import { Grid } from "@material-ui/core";
+import SocialCard from "../../components/Social/SocialCard";
 
 const useStyles = makeStyles(styles);
 
@@ -32,8 +34,16 @@ export default function SectionSocials() {
   
   return (
     <Grid container>
-      <Grid item>
+      <Grid item xs={12}>
         <h2 id="socials" className={classes.title}>Socials</h2>
+      </Grid>
+      <Grid item>
+        <SocialCard location="Twitter" style={{backgroundColor: "rgb(29, 155, 240)", borderRadius: "5px"}}>
+          <Twitter style={{fontSize: "4rem", color: "#fff"}} />
+        </SocialCard>
+        <SocialCard location="Twitter" style={{backgroundColor: "#0088cc", borderRadius: "5px"}}>
+          <Telegram style={{fontSize: "4rem", color: "#fff"}} />
+        </SocialCard>
       </Grid>
     </Grid>
   );

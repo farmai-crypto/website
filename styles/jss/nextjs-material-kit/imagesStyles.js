@@ -39,6 +39,9 @@ const imagesStyles = {
     left: "0",
     padding: "1.25rem",
   },
+  social: {
+    padding: "2rem"
+  },
 };
 
 export default imagesStyles;

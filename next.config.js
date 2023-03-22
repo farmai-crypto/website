@@ -3,6 +3,7 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ["@uniswap/conedison"],
   webpack(config) {
     //config.resolve.alias['@uniswap/conedison/provider/signing'] = path.join(__dirname, 'node_modules/@uniswap/conedison/dist/provider/signing');
     //config.resolve.alias['@uniswap/conedison/format'] = '@uniswap/conedison/dist/format';
