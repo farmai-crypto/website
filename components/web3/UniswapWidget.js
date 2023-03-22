@@ -1,8 +1,16 @@
-import { SwapWidget } from "@uniswap/widgets";
+
 import { getPriorityConnector, initializeConnector } from "@web3-react/core";
 import { MetaMask } from "@web3-react/metamask";
 import { WalletConnect } from "@web3-react/walletconnect";
 
+import dynamic from 'next/dynamic'
+const SwapWidget = dynamic(
+  async() => {
+  const res = await import('@uniswap/widgets');
+  return res.SwapWidget;
+  },
+  {ssr: false}
+  )
 const JSON_RPC_URL = 'https://cloudflare-eth.com';
 const metaMask = () => {
   const [connector, hooks] = initializeConnector((actions) => new MetaMask(actions, false));
