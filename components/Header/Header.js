@@ -16,6 +16,7 @@ import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 // core components
 import styles from "/styles/jss/nextjs-material-kit/components/headerStyle.js";
+import Image from "next/image";
 
 const useStyles = makeStyles(styles);
 
@@ -45,6 +46,8 @@ export default function Header(props) {
       document.body
         .getElementsByTagName("header")[0]
         .classList.add(classes[changeColorOnScroll.color]);
+      document.body
+        .getElementsByClassName(classes.title)[0].classList.add(classes.btnScrolled);
     } else {
       document.body
         .getElementsByTagName("header")[0]
@@ -52,6 +55,8 @@ export default function Header(props) {
       document.body
         .getElementsByTagName("header")[0]
         .classList.remove(classes[changeColorOnScroll.color]);
+        document.body
+        .getElementsByClassName(classes.title)[0].classList.remove(classes.btnScrolled);
     }
   };
   const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
@@ -63,6 +68,7 @@ export default function Header(props) {
   });
   const brandComponent = (
     <Link href="/" as="/">
+      <Image src="/img/farmai_header.png" width={48} height={48} />
       <Button className={classes.title}>{brand}</Button>
     </Link>
   );

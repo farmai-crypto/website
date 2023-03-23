@@ -41,6 +41,10 @@ const componentsStyle = {
   },
   textCenter: {
     textAlign: "center"
+  },
+  mainContent: {
+    backgroundColor: "#25624fde",
+    color: "#fff"
   }
 };
 

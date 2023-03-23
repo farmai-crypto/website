@@ -79,10 +79,10 @@ export default function Index(props) {
         </div>
       </Parallax>
 
-      <Grid container justify="center">
-        <Grid item lg={10} xs={11} className={classNames(classes.main, classes.mainRaised)}>
+      <Grid container justify="center" className={classes.mainContent}>
+        <Grid item xs={12}>
           <Grid container justify="center">
-            <Grid item xs={10}>
+            <Grid item sm={8} xs={10}>
               <SectionWhatWeDo />
               <SectionHowToBuy />
               <SectionWhoWeAre />
