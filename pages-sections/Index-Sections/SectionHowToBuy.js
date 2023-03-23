@@ -115,7 +115,7 @@ export default function SectionHowToBuy() {
       <Grid item xs={12}>
         <h2 id="how-to-buy" className={classes.title}>How to buy</h2>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item sm={4} xs={12}>
         <UniswapWidget />
       </Grid>
       <Grid item xs={12}>

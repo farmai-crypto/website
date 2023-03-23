@@ -21,7 +21,7 @@ import CustomInput from "/components/CustomInput/CustomInput.js";
 import CustomLinearProgress from "/components/CustomLinearProgress/CustomLinearProgress.js";
 import Paginations from "/components/Pagination/Pagination.js";
 import Badge from "/components/Badge/Badge.js";
-import { Telegram, Twitter } from "@material-ui/icons";
+import { GitHub, Telegram, Twitter, YouTube } from "@material-ui/icons";
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/whatWeDoStyle.js";
 import { Grid } from "@material-ui/core";
@@ -33,16 +33,28 @@ export default function SectionSocials() {
   const classes = useStyles();
   
   return (
-    <Grid container>
+    <Grid container spacing={2} justify="space-between">
       <Grid item xs={12}>
         <h2 id="socials" className={classes.title}>Socials</h2>
       </Grid>
-      <Grid item>
-        <SocialCard location="Twitter" style={{backgroundColor: "rgb(29, 155, 240)", borderRadius: "5px"}}>
+      <Grid item xs={6} sm={3} lg={2}>
+        <SocialCard location="https://twitter.com/CmetaToken" style={{backgroundColor: "rgb(29, 155, 240)", borderRadius: "5px"}}>
           <Twitter style={{fontSize: "4rem", color: "#fff"}} />
         </SocialCard>
+      </Grid>
+      <Grid item xs={6} sm={3} lg={2}>
         <SocialCard location="Twitter" style={{backgroundColor: "#0088cc", borderRadius: "5px"}}>
           <Telegram style={{fontSize: "4rem", color: "#fff"}} />
+        </SocialCard>
+      </Grid>
+      <Grid item xs={6} sm={3} lg={2}>
+        <SocialCard location="Twitter" style={{backgroundColor: "#c00", borderRadius: "5px"}}>
+          <YouTube style={{fontSize: "4rem", color: "#fff"}} />
+        </SocialCard>
+      </Grid>
+      <Grid item xs={6} sm={3} lg={2}>
+        <SocialCard location="Twitter" style={{backgroundColor: "#24292f", borderRadius: "5px"}}>
+          <GitHub style={{fontSize: "4rem", color: "#fff"}} />
         </SocialCard>
       </Grid>
     </Grid>

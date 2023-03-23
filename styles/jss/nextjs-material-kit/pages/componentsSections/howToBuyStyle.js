@@ -11,7 +11,8 @@ const whatWeDoStyle = {
     minHeight: "32px",
     textDecoration: "none",
     textAlign: "center",
-    fontSize: "3rem"
+    fontSize: "3rem",
+    scrollBehavior: "smooth"
   },
   space50: {
     height: "50px",

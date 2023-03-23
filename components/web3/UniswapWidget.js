@@ -1,4 +1,5 @@
 
+import { makeStyles } from "@material-ui/core";
 import { getPriorityConnector, initializeConnector } from "@web3-react/core";
 import { MetaMask } from "@web3-react/metamask";
 import { WalletConnect } from "@web3-react/walletconnect";
@@ -36,7 +37,11 @@ const activeProvider = () => {
   return getPriorityConnector(...connectors).usePriorityProvider();
 }
 
+import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/uniswapWidgetStyle.js";
+const useStyles = makeStyles(styles);
+
 const UniswapWidget = () => {
+  const classes = useStyles();
   const provider = activeProvider();
   const TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.uniswap.org';
   const UNI = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984';
@@ -50,7 +55,8 @@ const UniswapWidget = () => {
       onConnectWallet={focusConnectors}*/
       defaultInputTokenAddress="NATIVE"
       defaultInputAmount="1"
-      defaultOutputTokenAddress={UNI} />
+      defaultOutputTokenAddress={UNI}
+      className={classes.widget} />
   );
 }
 

@@ -10,7 +10,8 @@ const whatWeDoStyle = {
     paddingTop: "80px",
     minHeight: "32px",
     textDecoration: "none",
-    fontSize: "3rem"
+    fontSize: "3rem",
+    scrollBehavior: "smooth"
   },
   space50: {
     height: "50px",

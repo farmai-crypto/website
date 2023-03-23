@@ -55,11 +55,11 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="/#services"
+          href="/#socials"
           color="transparent"
           className={classes.navLink}
         >
-          <Icon className={classes.icons}>construction</Icon> Services
+          <Icon className={classes.icons}>public</Icon> Socials
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -68,7 +68,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          <Icon className={classes.icons}>public</Icon> Socials
+          <Icon className={classes.icons}>description</Icon> Whitepaper
         </Button>
       </ListItem>
     </List>

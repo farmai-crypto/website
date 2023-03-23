@@ -40,7 +40,8 @@ const imagesStyles = {
     padding: "1.25rem",
   },
   social: {
-    padding: "2rem"
+    padding: "2rem",
+    textAlign: "center"
   },
 };
 

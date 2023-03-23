@@ -48,6 +48,9 @@ export default function Index(props) {
       <style jsx global>{`
         html body * {
           font-family: ${nunito.style.fontFamily};
+        };
+        html, body {
+          scroll-behavior: smooth !important;
         }
       `}</style>
       <Header
@@ -84,18 +87,6 @@ export default function Index(props) {
               <SectionHowToBuy />
               <SectionWhoWeAre />
               <SectionSocials />
-              <SectionBasics />
-              <SectionNavbars />
-              <SectionTabs />
-              <SectionPills />
-              <SectionNotifications />
-              <SectionTypography />
-              <SectionJavascript />
-              <SectionCarousel />
-              <SectionCompletedExamples />
-              <SectionLogin />
-              <SectionExamples />
-              <SectionDownload />
             </Grid>
           </Grid>
         </Grid>

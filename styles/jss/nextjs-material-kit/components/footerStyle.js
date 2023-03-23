@@ -26,7 +26,9 @@ const footerStyle = {
     textAlign: "center",
     display: "flex",
     zIndex: "2",
-    position: "relative"
+    position: "relative",
+    display: "flex",
+    justifyContent: "center"
   },
   a: {
     color: primaryColor,
