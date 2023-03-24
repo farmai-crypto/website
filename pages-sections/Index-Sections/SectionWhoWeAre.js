@@ -37,20 +37,15 @@ export default function SectionWhoWeAre() {
       <Grid item>
         <h2 id="who-we-are" className={classes.title}>Who we are</h2>
       </Grid>
-      <Grid item container justify="space-between" spacing={2}>
-      <Grid item xs={12} sm={4}>
-          <MemberCard image="/img/people/trickz.jpg" title="Kojo">
+      <Grid item container justify="space-evenly" spacing={2}>
+      <Grid item>
+          <MemberCard image="/img/people/kojo.png" title="Kojo">
             Project founder and CEO
           </MemberCard>
         </Grid>
-        <Grid item xs={12} sm={4}>
-          <MemberCard image="/img/people/trickz.jpg" title="Dominik">
+        <Grid item>
+          <MemberCard image="/img/people/trickz.png" title="Dominik">
             Blockchain developer and CIO
-          </MemberCard>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <MemberCard image="/img/people/trickz.jpg" title="Name">
-            Description
           </MemberCard>
         </Grid>
       </Grid>

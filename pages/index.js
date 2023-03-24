@@ -58,8 +58,8 @@ export default function Index(props) {
         html body * {
           font-family: ${nunito.style.fontFamily};
         };
-        html, body {
-          scroll-behavior: smooth !important;
+        html {
+          scroll-behavior: smooth;
         }
       `}</style>
       <Header

@@ -22,7 +22,7 @@ export default function MemberCard({image, title, children}) {
   return (
     <Card>
       <img
-        style={{height: "320px", width: "100%", display: "block", backgroundColor: "rgb(48 95 129)", padding: "10px", objectFit: "contain"}}
+        style={{height: "320px", width: "100%", display: "block", backgroundColor: "rgb(80 145 191)", padding: "10px", objectFit: "contain"}}
         className={classes.imgCardTop}
         src={image}
         alt="Card-img-cap"

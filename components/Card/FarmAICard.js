@@ -17,12 +17,12 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-export default function FarmAICard({image, title, children}) {
+export default function FarmAICard({background, image, title, children}) {
   const classes = useStyles();
   return (
     <Card>
       <img
-        style={{height: "80px", width: "100%", display: "block", backgroundColor: "#666", padding: "10px"}}
+        style={{height: "80px", width: "100%", display: "block", backgroundColor: background, padding: "10px"}}
         className={classes.imgCardTop}
         src={image}
         alt="Card-img-cap"
