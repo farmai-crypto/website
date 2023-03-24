@@ -28,8 +28,6 @@ import SectionDownload from "/pages-sections/Components-Sections/SectionDownload
 
 import styles from "/styles/jss/nextjs-material-kit/pages/index.js";
 
-const useStyles = makeStyles(styles);
-
 // Custom font
 import { Nunito } from "next/font/google";
 import { Grid } from "@material-ui/core";
@@ -39,6 +37,17 @@ import SectionWhoWeAre from "../pages-sections/Index-Sections/SectionWhoWeAre";
 import SectionServices from "../pages-sections/Index-Sections/SectionServices";
 import SectionSocials from "../pages-sections/Index-Sections/SectionSocials";
 const nunito = Nunito({ subsets: ['latin'], fallback: ['"Roboto", "Helvetica", "Arial", sans-serif']})
+
+const useStyles = makeStyles(() => ({
+  mainScreenBuyButton: {
+    marginTop: "5vh",
+    backgroundColor: "#25624ff0",
+    '&:hover': {
+      backgroundColor: '#48af8ff0',
+    }
+  },
+  ...styles
+}));
 
 export default function Index(props) {
   const classes = useStyles();
@@ -73,6 +82,7 @@ export default function Index(props) {
                 <h3 className={classes.subtitle}>
                   Utilize technology to enhance farming - for everyone.
                 </h3>
+                <Button className={classes.mainScreenBuyButton} href="/#how-to-buy">Buy now</Button>
               </div>
             </GridItem>
           </GridContainer>

@@ -5,15 +5,13 @@ const whatWeDoStyle = {
   sections: {
     padding: "70px 0"
   },
-  container: {
-    paddingTop: "80px",
-  },
   title: {
     minHeight: "32px",
     textDecoration: "none",
     textAlign: "center",
     fontSize: "3rem",
-    scrollBehavior: "smooth"
+    scrollBehavior: "smooth",
+    paddingTop: "80px"
   },
   space50: {
     height: "50px",

@@ -8,6 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // core components
 import styles from "/styles/jss/nextjs-material-kit/components/parallaxStyle.js";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
 
@@ -44,7 +45,8 @@ export default function Parallax(props) {
     [className]: className !== undefined
   });
   return (
-    <div
+    <Grid container
+      direction="column"
       className={parallaxClasses}
       style={{
         ...style,
@@ -52,8 +54,11 @@ export default function Parallax(props) {
         // transform: transform
       }}
     >
-      {children}
-    </div>
+      <Grid item lg={5} sm={4} xs={3} />
+      <Grid item>
+        {children}
+      </Grid>
+    </Grid>
   );
 }
 
