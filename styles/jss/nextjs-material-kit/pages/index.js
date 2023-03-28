@@ -43,7 +43,7 @@ const componentsStyle = {
     textAlign: "center"
   },
   mainContent: {
-    backgroundColor: "#25624fde",
+    backgroundColor: "#28765ec7",
     color: "#fff"
   }
 };
