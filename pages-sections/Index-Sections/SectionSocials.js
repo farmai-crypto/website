@@ -37,23 +37,23 @@ export default function SectionSocials() {
     <ContentBox id="socials" title="Socials">
       <Grid container spacing={2} justify="space-between">
         <Grid item xs={6} sm={3} lg={2}>
-          <SocialCard location="https://twitter.com/CmetaToken" style={{backgroundColor: "rgb(29, 155, 240)", borderRadius: "5px"}}>
-            <Twitter style={{fontSize: "4rem", color: "#fff"}} />
+          <SocialCard location="https://twitter.com/FarmAiToken" style={{backgroundColor: "rgb(29, 155, 240)", borderRadius: "5px"}}>
+            <Twitter style={{fontSize: "3rem", color: "#fff"}} />
           </SocialCard>
         </Grid>
         <Grid item xs={6} sm={3} lg={2}>
-          <SocialCard location="Twitter" style={{backgroundColor: "#0088cc", borderRadius: "5px"}}>
-            <Telegram style={{fontSize: "4rem", color: "#fff"}} />
+          <SocialCard location="https://t.me/FarmAiToken" title="Telegram" style={{backgroundColor: "#0088cc", borderRadius: "5px"}}>
+            <Telegram style={{fontSize: "3rem", color: "#fff"}} />
           </SocialCard>
         </Grid>
         <Grid item xs={6} sm={3} lg={2}>
-          <SocialCard location="Twitter" style={{backgroundColor: "#c00", borderRadius: "5px"}}>
-            <YouTube style={{fontSize: "4rem", color: "#fff"}} />
+          <SocialCard location="https://twitter.com/FarmAiToken" style={{backgroundColor: "#c00", borderRadius: "5px"}}>
+            <YouTube style={{fontSize: "3rem", color: "#fff"}} />
           </SocialCard>
         </Grid>
         <Grid item xs={6} sm={3} lg={2}>
-          <SocialCard location="Twitter" style={{backgroundColor: "#24292f", borderRadius: "5px"}}>
-            <GitHub style={{fontSize: "4rem", color: "#fff"}} />
+          <SocialCard location="https://github.com/orgs/farmai-crypto" style={{backgroundColor: "#24292f", borderRadius: "5px"}}>
+            <GitHub style={{fontSize: "3rem", color: "#fff"}} />
           </SocialCard>
         </Grid>
       </Grid>

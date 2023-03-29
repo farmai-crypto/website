@@ -23,11 +23,12 @@ import Paginations from "/components/Pagination/Pagination.js";
 import Badge from "/components/Badge/Badge.js";
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/whatWeDoStyle.js";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@material-ui/core";
 import Image from "next/image";
 
-import farmingHands from "/public/img/sections/what-we-do/farm-hands.jpg";
+import farmingSky from "/public/img/sections/what-we-do/farm-sky.jpg";
 import ContentBox from "../../components/ContentBox/ContentBox";
+import { Landscape, Memory, Timelapse } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
@@ -37,13 +38,43 @@ export default function SectionWhatWeDo() {
   return (
     <ContentBox id="what-we-do" title="Farming meets AI" className={classes.mainContainer}>
       <Grid container spacing={2} className={classes.container}>
-        <Grid item container sm={6} xs={12} justify="flex-end">
-          <Image src={farmingHands} width={300} alt="farming-hands" />
+        <Grid container item sm={6} xs={12}>
+          <Grid item xs={12}>
+            <p style={{fontSize: "1rem"}}>
+              Artificial intelligence is ubiquitous nowadays.
+              It helps in automating tasks, empowers your Google search, drives your cleaning robotic device at home and assists you in executing trades on your trading platform.
+              The field of AI applicability seems to be endless and we want to use it to empower agriculture.
+              Agriculture is a vital part of human society and our belief is that we can leverage it to build an ecosystem where most work is done by AI itself - supervised by human beings.  
+            </p>
+          </Grid>
+          <Grid item xs={12}>
+            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+              <ListItem disablePadding>
+                <ListItemIcon>
+                  <Landscape style={{color: "#28946e"}} />
+                </ListItemIcon>
+                <ListItemText primary="Autonomous agriculture" />
+              </ListItem>
+              <ListItem disablePadding>
+                <ListItemIcon>
+                  <Timelapse style={{color: "#28946e"}} />
+                </ListItemIcon>
+                <ListItemText primary="Demand-driven supply chain" />
+              </ListItem>
+              <ListItem disablePadding>
+                <ListItemIcon>
+                  <Memory style={{color: "#28946e"}} />
+                </ListItemIcon>
+                <ListItemText primary="Next-gen technology" />
+              </ListItem>
+            </List>
+          </Grid>
+          <Grid item>
+            <Button>Read the whitepaper</Button>
+          </Grid>
         </Grid>
-        <Grid item sm={6} xs={12}>
-          <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut porttitor augue, non iaculis diam. Mauris venenatis orci vitae ex maximus accumsan. Cras non dolor tortor. Proin sed viverra sapien. Pellentesque fermentum finibus finibus. Integer vulputate quam eget scelerisque condimentum. In auctor urna augue, sit amet feugiat massa pulvinar at. Donec gravida odio a justo convallis efficitur. Vivamus imperdiet varius ante vel feugiat. Vivamus eget sapien viverra, tempor arcu id, egestas elit. Sed in nibh vehicula risus dictum cursus vitae eu dui. Pellentesque cursus ut magna eu pellentesque. Mauris id neque eu sem auctor convallis congue quis nisi.
-            </Typography>
+        <Grid item container sm={6} xs={12} justify="flex-end">
+          <Image src={farmingSky} width={300} style={{opacity: "0.9", borderRadius: "5px"}} alt="farming-hands" />
         </Grid>
       </Grid>
     </ContentBox>
