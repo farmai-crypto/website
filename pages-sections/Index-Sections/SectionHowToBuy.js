@@ -36,6 +36,7 @@ import Marketing from "/public/img/cards/marketing.svg";
 import CustomTabs from "/components/CustomTabs/CustomTabs.js";
 import FarmAICard from "../../components/Card/FarmAICard";
 import UniswapWidget from "../../components/web3/UniswapWidget";
+import ContentBox from "../../components/ContentBox/ContentBox";
 
 const Tokenomics = () => {
   const classes = useStyles();
@@ -111,48 +112,47 @@ export default function SectionHowToBuy() {
   const classes = useStyles();
   
   return (
-    <Grid container justify="center">
-      <Grid item xs={12}>
-        <h2 id="how-to-buy" className={classes.title}>How to buy</h2>
-      </Grid>
-      <Grid item sm={4} xs={12}>
-        <UniswapWidget />
-      </Grid>
-      <Grid item xs={12}>
-        <Typography variant="body1" style={{textAlign: "center"}}>Uniswap exchange</Typography>
-      </Grid>
-      <Grid item container xs={12} spacing={2} justify="space-between">
-        <Grid item xs={12}>
-          <h3 style={{textAlign: "center", fontSize: "2rem"}}>Tokenomics</h3>
-        </Grid>
+    <ContentBox id="how-to-buy" title="How to buy">
+      <Grid container justify="center">
         <Grid item sm={4} xs={12}>
-          <FarmAICard title="5% marketing" image="/img/cards/marketing.svg" background="#3aadb3">
-            The marketing fees allow the team to increase awareness of our project by spreading the word about #FAI.
-            Bigger marketing campaigns allow us to sky rocket and reach our project goals earlier and better.
-          </FarmAICard>
-        </Grid>
-        <Grid item sm={4} xs={12}>
-          <FarmAICard title="2% liquidity" image="/img/cards/liquidity.svg" background="rgb(227 184 63)">
-            Auto-liquidity ensures a healthy money pool to harden the pool against strong withdrawals.
-            The result is that your coins remain valuable -  even when many people sell.
-          </FarmAICard>
-        </Grid>
-        <Grid item sm={4} xs={12}>
-          <FarmAICard title="3% rewards" image="/img/cards/rewards.svg" background="rgb(21 209 122)">
-            Get a good bang for your buck.
-            Including reward fees helps our holders to get something back for their investment and their trust into our project.<br />
-            <strong>Hint: The more you hold the more you get!</strong>
-          </FarmAICard>
+          <UniswapWidget />
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="body1">
-            Token fees fulfill one purpose: To help token economy growing.
-            We adjusted the tokenomics to our best knowledge in order to balance between token price stabilization, project evolvement 
-            and investing incentives to ensure long-term health of our project and the investment of our holders.
-            We will fine-tune the tokenomics from time to time in order to keep in sync with the current market situation and project performance.
-          </Typography>
+          <Typography variant="body1" style={{textAlign: "center"}}>Uniswap exchange</Typography>
+        </Grid>
+        <Grid item container xs={12} spacing={2} justify="space-between">
+          <Grid item xs={12}>
+            <h3 style={{textAlign: "center", fontSize: "2rem"}}>Tokenomics</h3>
+          </Grid>
+          <Grid item sm={4} xs={12}>
+            <FarmAICard title="5% marketing" image="/img/cards/marketing.svg" background="#3aadb3">
+              The marketing fees allow the team to increase awareness of our project by spreading the word about #FAI.
+              Bigger marketing campaigns allow us to sky rocket and reach our project goals earlier and better.
+            </FarmAICard>
+          </Grid>
+          <Grid item sm={4} xs={12}>
+            <FarmAICard title="2% liquidity" image="/img/cards/liquidity.svg" background="rgb(227 184 63)">
+              Auto-liquidity ensures a healthy money pool to harden the pool against strong withdrawals.
+              The result is that your coins remain valuable -  even when many people sell.
+            </FarmAICard>
+          </Grid>
+          <Grid item sm={4} xs={12}>
+            <FarmAICard title="3% rewards" image="/img/cards/rewards.svg" background="rgb(21 209 122)">
+              Get a good bang for your buck.
+              Including reward fees helps our holders to get something back for their investment and their trust into our project.<br />
+              <strong>Hint: The more you hold the more you get!</strong>
+            </FarmAICard>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="body1">
+              Token fees fulfill one purpose: To help token economy growing.
+              We adjusted the tokenomics to our best knowledge in order to balance between token price stabilization, project evolvement 
+              and investing incentives to ensure long-term health of our project and the investment of our holders.
+              We will fine-tune the tokenomics from time to time in order to keep in sync with the current market situation and project performance.
+            </Typography>
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </ContentBox>
   );
 }

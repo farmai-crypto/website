@@ -35,11 +35,8 @@ export default function SectionWhatWeDo() {
   const classes = useStyles();
   
   return (
-    <ContentBox className={classes.mainContainer}>
+    <ContentBox id="what-we-do" title="Farming meets AI" className={classes.mainContainer}>
       <Grid container spacing={2} className={classes.container}>
-        <Grid item xs={12}>
-          <h2 id="what-we-do" className={classes.title}>Farming meets AI</h2>
-        </Grid>
         <Grid item container sm={6} xs={12} justify="flex-end">
           <Image src={farmingHands} width={300} alt="farming-hands" />
         </Grid>

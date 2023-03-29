@@ -2,9 +2,6 @@ import { container, title } from "/styles/jss/nextjs-material-kit.js";
 import customCheckboxRadioSwitch from "/styles/jss/nextjs-material-kit/customCheckboxRadioSwitch.js";
 
 const whatWeDoStyle = {
-  mainContainer: {
-    marginTop: "70px"
-  },
   sections: {
     padding: "70px 0"
   },
@@ -14,7 +11,7 @@ const whatWeDoStyle = {
     textAlign: "center",
     fontSize: "3rem",
     scrollBehavior: "smooth",
-    paddingTop: "80px"
+    paddingTop: "0px"
   },
   space50: {
     height: "50px",

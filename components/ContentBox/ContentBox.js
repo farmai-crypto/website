@@ -7,6 +7,7 @@ import CardBody from "/components/Card/CardBody.js";
 import Button from "/components/CustomButtons/Button.js";
 
 import contentBoxStyle from "/styles/jss/farmai/components/contentBoxStyle.js";
+import { Grid } from "@material-ui/core";
 
 const styles = {
   ...contentBoxStyle,
@@ -14,12 +15,26 @@ const styles = {
 const useStyles = makeStyles(styles);
 
 
-const ContentBox = ({className, children}) => {
+const ContentBox = ({id, title, className, children}) => {
   const classes = useStyles();
   
   return (
-    <div className={[classes.container, className]}>
-      {children}
+    <div id={id} className={classes.outerContainer}>
+      <div className={[classes.container, className].join(" ")}>
+        <Grid container>
+          <Grid item xs={12}>
+            <h2 className={classes.title}>{title}</h2>
+          </Grid>
+          <Grid item xs={12}>
+            <hr />
+          </Grid>
+          <Grid item xs={12}>
+            <div className={classes.content}>
+              {children}
+            </div>
+          </Grid>
+        </Grid>
+      </div>
     </div>
   );
 }
