@@ -92,7 +92,7 @@ export default function Index(props) {
       <Grid container justify="center" className={classes.mainContent}>
         <Grid item xs={12}>
           <Grid container justify="center">
-            <Grid item sm={8} xs={10}>
+            <Grid item xl={8} xs={10}>
               <SectionWhatWeDo />
               <SectionHowToBuy />
               <SectionWhoWeAre />
@@ -100,8 +100,10 @@ export default function Index(props) {
             </Grid>
           </Grid>
         </Grid>
+        <Grid item xs={12}>
+          <Footer />
+        </Grid>
       </Grid>
-      <Footer />
     </div>
   );
 }

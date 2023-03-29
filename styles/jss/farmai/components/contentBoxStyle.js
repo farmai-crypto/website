@@ -5,7 +5,7 @@ const contentBoxStyle = {
   container: {
     display: "flex",
     padding: "2rem",
-    backgroundColor: "#142c1fb3",
+    backgroundColor: "#00000060",
     borderRadius: "3px"
   },
   content: {

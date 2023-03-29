@@ -43,7 +43,7 @@ const componentsStyle = {
     textAlign: "center"
   },
   mainContent: {
-    backgroundColor: "#28765ec7",
+    background: "linear-gradient(180deg, rgba(11,45,69,1) 0%, rgba(33,101,80,0.9528405112044818) 35%, rgba(36,113,98,0.9472382703081232) 50%, rgba(33,101,80,1) 65%, rgba(11,45,69,1) 100%);",
     color: "#fff"
   }
 };

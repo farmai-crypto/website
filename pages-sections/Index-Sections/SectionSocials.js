@@ -26,6 +26,7 @@ import { GitHub, Telegram, Twitter, YouTube } from "@material-ui/icons";
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/whatWeDoStyle.js";
 import { Grid } from "@material-ui/core";
 import SocialCard from "../../components/Social/SocialCard";
+import ContentBox from "../../components/ContentBox/ContentBox";
 
 const useStyles = makeStyles(styles);
 
@@ -33,30 +34,29 @@ export default function SectionSocials() {
   const classes = useStyles();
   
   return (
-    <Grid container spacing={2} justify="space-between">
-      <Grid item xs={12}>
-        <h2 id="socials" className={classes.title}>Socials</h2>
+    <ContentBox id="socials" title="Socials">
+      <Grid container spacing={2} justify="space-between">
+        <Grid item xs={6} sm={3} lg={2}>
+          <SocialCard location="https://twitter.com/CmetaToken" style={{backgroundColor: "rgb(29, 155, 240)", borderRadius: "5px"}}>
+            <Twitter style={{fontSize: "4rem", color: "#fff"}} />
+          </SocialCard>
+        </Grid>
+        <Grid item xs={6} sm={3} lg={2}>
+          <SocialCard location="Twitter" style={{backgroundColor: "#0088cc", borderRadius: "5px"}}>
+            <Telegram style={{fontSize: "4rem", color: "#fff"}} />
+          </SocialCard>
+        </Grid>
+        <Grid item xs={6} sm={3} lg={2}>
+          <SocialCard location="Twitter" style={{backgroundColor: "#c00", borderRadius: "5px"}}>
+            <YouTube style={{fontSize: "4rem", color: "#fff"}} />
+          </SocialCard>
+        </Grid>
+        <Grid item xs={6} sm={3} lg={2}>
+          <SocialCard location="Twitter" style={{backgroundColor: "#24292f", borderRadius: "5px"}}>
+            <GitHub style={{fontSize: "4rem", color: "#fff"}} />
+          </SocialCard>
+        </Grid>
       </Grid>
-      <Grid item xs={6} sm={3} lg={2}>
-        <SocialCard location="https://twitter.com/CmetaToken" style={{backgroundColor: "rgb(29, 155, 240)", borderRadius: "5px"}}>
-          <Twitter style={{fontSize: "4rem", color: "#fff"}} />
-        </SocialCard>
-      </Grid>
-      <Grid item xs={6} sm={3} lg={2}>
-        <SocialCard location="Twitter" style={{backgroundColor: "#0088cc", borderRadius: "5px"}}>
-          <Telegram style={{fontSize: "4rem", color: "#fff"}} />
-        </SocialCard>
-      </Grid>
-      <Grid item xs={6} sm={3} lg={2}>
-        <SocialCard location="Twitter" style={{backgroundColor: "#c00", borderRadius: "5px"}}>
-          <YouTube style={{fontSize: "4rem", color: "#fff"}} />
-        </SocialCard>
-      </Grid>
-      <Grid item xs={6} sm={3} lg={2}>
-        <SocialCard location="Twitter" style={{backgroundColor: "#24292f", borderRadius: "5px"}}>
-          <GitHub style={{fontSize: "4rem", color: "#fff"}} />
-        </SocialCard>
-      </Grid>
-    </Grid>
+    </ContentBox>
   );
 }
