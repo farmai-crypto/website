@@ -3,6 +3,12 @@ const customTabsStyle = {
     float: "left",
     padding: "10px 10px 10px 0px",
     lineHeight: "24px",
+    fontSize: "1.2rem",
+    fontWeight: "100",
+    "@media (max-width: 600px)": {
+      width: "100%",
+      textAlign: "center"
+    }
   },
   cardTitleRTL: {
     float: "right",

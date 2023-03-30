@@ -3,7 +3,9 @@ import {
   successCardHeader,
   dangerCardHeader,
   infoCardHeader,
-  primaryCardHeader
+  primaryCardHeader,
+  farmAISecondaryCardHeader,
+  farmAITertiaryCardHeader
 } from "/styles/jss/nextjs-material-kit.js";
 
 const cardHeaderStyle = {
@@ -24,7 +26,9 @@ const cardHeaderStyle = {
   successCardHeader,
   dangerCardHeader,
   infoCardHeader,
-  primaryCardHeader
+  primaryCardHeader,
+  farmAISecondaryCardHeader,
+  farmAITertiaryCardHeader
 };
 
 export default cardHeaderStyle;

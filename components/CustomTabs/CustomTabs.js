@@ -5,7 +5,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 // material-ui components
-import { makeStyles } from "@material-ui/core/styles";
+import { createMuiTheme, ThemeProvider, makeStyles, MuiThemeProvider } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Icon from "@material-ui/core/Icon";
@@ -15,17 +15,38 @@ import CardBody from "/components/Card/CardBody.js";
 import CardHeader from "/components/Card/CardHeader.js";
 
 import styles from "/styles/jss/nextjs-material-kit/components/customTabsStyle.js";
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
+const breakpoints = createBreakpoints({});
+
+const theme = createMuiTheme({
+  overrides: {
+    // Name of the component
+    MuiTabs: {
+      // Name of the slot
+      flexContainer: {
+        display: "flex",
+        justifyContent: "end",
+        [breakpoints.down(600)]: {
+          display: "none"
+        },
+      },
+    },
+  },
+});
+
 
 export default function CustomTabs(props) {
   const [value, setValue] = React.useState(0);
+  const showSummary = useMediaQuery(breakpoints.down(600));
 
   const handleChange = (event, value) => {
     setValue(value);
   };
   const classes = useStyles();
-  const { headerColor, plainTabs, tabs, title, rtlActive } = props;
+  const { headerColor, plainTabs, tabs, title, rtlActive, summary } = props;
   const cardTitle = classNames({
     [classes.cardTitle]: true,
     [classes.cardTitleRTL]: rtlActive
@@ -34,49 +55,55 @@ export default function CustomTabs(props) {
     <Card plain={plainTabs}>
       <CardHeader color={headerColor} plain={plainTabs}>
         {title !== undefined ? <div className={cardTitle}>{title}</div> : null}
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          classes={{
-            root: classes.tabsRoot,
-            indicator: classes.displayNone
-          }}
-        >
-          {tabs.map((prop, key) => {
-            var icon = {};
-            if (prop.tabIcon) {
-              icon = {
-                icon:
-                  typeof prop.tabIcon === "string" ? (
-                    <Icon>{prop.tabIcon}</Icon>
-                  ) : (
-                    <prop.tabIcon />
-                  )
-              };
-            }
-            return (
-              <Tab
-                classes={{
-                  root: classes.tabRootButton,
-                  label: classes.tabLabel,
-                  selected: classes.tabSelected,
-                  wrapper: classes.tabWrapper
-                }}
-                key={key}
-                label={prop.tabName}
-                {...icon}
-              />
-            );
-          })}
-        </Tabs>
+        <MuiThemeProvider theme={theme}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            classes={{
+              root: classes.tabsRoot,
+              indicator: classes.displayNone
+            }}
+          >
+            {tabs.map((prop, key) => {
+              var icon = {};
+              if (prop.tabIcon) {
+                icon = {
+                  icon:
+                    typeof prop.tabIcon === "string" ? (
+                      <Icon>{prop.tabIcon}</Icon>
+                    ) : (
+                      <prop.tabIcon />
+                    )
+                };
+              }
+              return (
+                <Tab
+                  classes={{
+                    root: classes.tabRootButton,
+                    label: classes.tabLabel,
+                    selected: classes.tabSelected,
+                    wrapper: classes.tabWrapper
+                  }}
+                  key={key}
+                  label={prop.tabName}
+                  {...icon}
+                />
+              );
+            })}
+          </Tabs>
+        </MuiThemeProvider>
       </CardHeader>
       <CardBody>
-        {tabs.map((prop, key) => {
-          if (key === value) {
-            return <div key={key}>{prop.tabContent}</div>;
-          }
-          return null;
-        })}
+        {
+          showSummary ? 
+          <div>{summary}</div> :
+          tabs.map((prop, key) => {
+            if (key === value) {
+              return <div key={key}>{prop.tabContent}</div>;
+            }
+            return null;
+          })
+        }
       </CardBody>
     </Card>
   );

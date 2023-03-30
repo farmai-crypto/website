@@ -1,104 +1,147 @@
 import React from "react";
 // plugin that creates slider
-import Slider from "nouislider";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Radio from "@material-ui/core/Radio";
-import Switch from "@material-ui/core/Switch";
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import People from "@material-ui/icons/People";
-import Check from "@material-ui/icons/Check";
-import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 // core components
-import GridContainer from "/components/Grid/GridContainer.js";
-import GridItem from "/components/Grid/GridItem.js";
-import Button from "/components/CustomButtons/Button.js";
-import CustomInput from "/components/CustomInput/CustomInput.js";
-import CustomLinearProgress from "/components/CustomLinearProgress/CustomLinearProgress.js";
-import Paginations from "/components/Pagination/Pagination.js";
-import Badge from "/components/Badge/Badge.js";
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/howToBuyStyle.js";
 import { Grid, Typography } from "@material-ui/core";
+import Button from "/components/CustomButtons/Button.js";
 
-const useStyles = makeStyles(styles);
+const allStyles = {
+  uniswapBuyButton: {
+    backgroundColor: "rgb(231 60 151 / 90%)",
+    '&:hover, &:focus': {
+      backgroundColor: 'rgb(169 45 111 / 90%)',
+    }
+  },
+  ...styles
+}
+const useStyles = makeStyles(allStyles);
 
 // Tokenomics data
 // @material-ui/icons
-import Face from "@material-ui/icons/Face";
-import Chat from "@material-ui/icons/Chat";
-import Build from "@material-ui/icons/Build";
-import Marketing from "/public/img/cards/marketing.svg";
-import CustomTabs from "/components/CustomTabs/CustomTabs.js";
 import FarmAICard from "../../components/Card/FarmAICard";
 import UniswapWidget from "../../components/web3/UniswapWidget";
 import ContentBox from "../../components/ContentBox/ContentBox";
+import { Listing, ListingItem } from "../../components/Listing/Listing";
+import { School , HourglassFull, MonetizationOn, Code, Face, Chat, Build, Assessment, Opacity} from "@material-ui/icons";
+import GridContainer from '../../components/Grid/GridContainer';
+import GridItem from '../../components/Grid/GridItem';
+import CustomTabs from '../../components/CustomTabs/CustomTabs';
+
 
 const Tokenomics = () => {
   const classes = useStyles();
+  const tokenomics = {
+    marketing: {
+      buy: "3%",
+      sell: "6%",
+    },
+    liquidity: {
+      buy: "1%",
+      sell: "2%",
+    },
+    rewards: {
+      buy: "1%",
+      sell: "2%",
+    },
+  }
   return (
-    <div className={classes.section}>
-      <div className={classes.container}>
+    <div>
+      <div>
         <div id="nav-tabs">
           <h3>Tokenomics</h3>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} md={6}>
               <CustomTabs
-                headerColor="primary"
+                headerColor="farmAISecondary"
+                title="5% buy"
                 tabs={[
                   {
-                    tabName: "Profile",
-                    tabIcon: Face,
+                    tabName: `${tokenomics.marketing.buy} Marketing`,
+                    tabIcon: Assessment,
                     tabContent: (
                       <p className={classes.textCenter}>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
+                        The marketing fees allow the team to increase awareness of our project by spreading the word about <strong>#FAI</strong>. 
+                        Bigger marketing campaigns allow us to sky rocket and reach our project goals earlier and better.
                       </p>
                     )
                   },
                   {
-                    tabName: "Messages",
-                    tabIcon: Chat,
+                    tabName: `${tokenomics.liquidity.buy} Liquidity`,
+                    tabIcon: Opacity,
                     tabContent: (
                       <p className={classes.textCenter}>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. I will be the leader of a company
-                        that ends up being worth billions of dollars, because I
-                        got the answers. I understand culture. I am the nucleus.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
+                        Auto-liquidity ensures a healthy money pool to harden the pool against strong withdrawals. 
+                        The result is that your coins remain valuable - even when many people sell.
                       </p>
                     )
                   },
                   {
-                    tabName: "Settings",
-                    tabIcon: Build,
+                    tabName: `${tokenomics.rewards.buy} Rewards`,
+                    tabIcon: MonetizationOn,
                     tabContent: (
                       <p className={classes.textCenter}>
-                        think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
+                        Get a good bang for your buck. Including reward fees helps our holders to get something back for their investment and their trust into our project.<br />
+                        <strong>Hint: The more you hold the more you get!</strong>
                       </p>
                     )
                   }
                 ]}
+                summary={(
+                  <Listing>
+                    <ListingItem icon={<Assessment  style={{color: "rgb(52 143 171)"}} />} text={`${tokenomics.marketing.buy} Marketing`} />
+                    <ListingItem icon={<Opacity  style={{color: "rgb(215 69 177)"}} />} text={`${tokenomics.liquidity.buy} Liquidity`} />
+                    <ListingItem icon={<MonetizationOn  style={{color: "rgb(223 188 60)"}} />} text={`${tokenomics.rewards.buy} Rewards`} />
+                  </Listing>
+                )}
+              />
+            </GridItem>
+            <GridItem xs={12} md={6}>
+            <CustomTabs
+                headerColor="farmAITertiary"
+                title="10% sell"
+                tabs={[
+                  {
+                    tabName: `${tokenomics.marketing.sell} Marketing`,
+                    tabIcon: Assessment,
+                    tabContent: (
+                      <p className={classes.textCenter}>
+                        The marketing fees allow the team to increase awareness of our project by spreading the word about <strong>#FAI</strong>. 
+                        Bigger marketing campaigns allow us to sky rocket and reach our project goals earlier and better.
+                      </p>
+                    )
+                  },
+                  {
+                    tabName: `${tokenomics.liquidity.sell} Liquidity`,
+                    tabIcon: Opacity,
+                    tabContent: (
+                      <p className={classes.textCenter}>
+                        Auto-liquidity ensures a healthy money pool to harden the pool against strong withdrawals. 
+                        The result is that your coins remain valuable - even when many people sell.
+                      </p>
+                    )
+                  },
+                  {
+                    tabName: `${tokenomics.rewards.sell} Rewards`,
+                    tabIcon: MonetizationOn,
+                    tabContent: (
+                      <p className={classes.textCenter}>
+                        Get a good bang for your buck. Including reward fees helps our holders to get something back for their investment and their trust into our project.<br />
+                        <strong>Hint: The more you hold the more you get!</strong>
+                      </p>
+                    )
+                  }
+                ]}
+                summary={(
+                  <Listing>
+                    <ListingItem icon={<Assessment  style={{color: "rgb(52 143 171)"}} />} text={`${tokenomics.marketing.sell} Marketing`} />
+                    <ListingItem icon={<Opacity  style={{color: "rgb(215 69 177)"}} />} text={`${tokenomics.liquidity.sell} Liquidity`} />
+                    <ListingItem icon={<MonetizationOn  style={{color: "rgb(223 188 60)"}} />} text={`${tokenomics.rewards.sell} Rewards`} />
+                  </Listing>
+                )}
               />
             </GridItem>
           </GridContainer>
@@ -110,47 +153,35 @@ const Tokenomics = () => {
 
 export default function SectionHowToBuy() {
   const classes = useStyles();
+  const farmAITokenAddress = "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984";
+  const uniswapSwapAddress = `https://app.uniswap.org/#/tokens/ethereum/${farmAITokenAddress}`;
   
   return (
     <ContentBox id="how-to-buy" title="How to buy">
       <Grid container justify="center">
+        <Grid item sm={6} xs={12}>
+          <h3 style={{marginTop: 0}}>Participating in FarmAI</h3>
+          <p style={{fontSize: "1rem"}}>
+            To take a step forward and get yourself a share of #FAI, you can invest into our token via the Uniswap widget or by clicking on the button below.
+            We have a lot to provide for the future, so joining our community is key to staying updated and entering early allows to you to grow big profits over the course of our project.
+            Want to get a small introduction into your benefits joining us? <br />
+            We got you.
+          </p>
+          <Listing>
+            <ListingItem icon={<School  style={{color: "#28946e"}} />} text="Professional team with multiple years of experience" />
+            <ListingItem icon={<HourglassFull  style={{color: "#28946e"}} />} text="Long-term project that builds to stay" />
+            <ListingItem icon={<MonetizationOn  style={{color: "#28946e"}} />} text="Automatic reward system benefiting holders for their investment" />
+            <ListingItem icon={<Code  style={{color: "#28946e"}} />} text="In-house quality software development" />
+          </Listing>
+          <Button className={classes.uniswapBuyButton} href={uniswapSwapAddress} target="_blank">Buy on Uniswap</Button>
+        </Grid>
+        <Grid item xs={2} />
         <Grid item sm={4} xs={12}>
           <UniswapWidget />
+          <p style={{textAlign: "center", fontSize: "1rem"}}>Uniswap exchange</p>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="body1" style={{textAlign: "center"}}>Uniswap exchange</Typography>
-        </Grid>
-        <Grid item container xs={12} spacing={2} justify="space-between">
-          <Grid item xs={12}>
-            <h3 style={{textAlign: "center", fontSize: "2rem"}}>Tokenomics</h3>
-          </Grid>
-          <Grid item sm={4} xs={12}>
-            <FarmAICard title="5% marketing" image="/img/cards/marketing.svg" background="#3aadb3">
-              The marketing fees allow the team to increase awareness of our project by spreading the word about #FAI.
-              Bigger marketing campaigns allow us to sky rocket and reach our project goals earlier and better.
-            </FarmAICard>
-          </Grid>
-          <Grid item sm={4} xs={12}>
-            <FarmAICard title="2% liquidity" image="/img/cards/liquidity.svg" background="rgb(227 184 63)">
-              Auto-liquidity ensures a healthy money pool to harden the pool against strong withdrawals.
-              The result is that your coins remain valuable -  even when many people sell.
-            </FarmAICard>
-          </Grid>
-          <Grid item sm={4} xs={12}>
-            <FarmAICard title="3% rewards" image="/img/cards/rewards.svg" background="rgb(21 209 122)">
-              Get a good bang for your buck.
-              Including reward fees helps our holders to get something back for their investment and their trust into our project.<br />
-              <strong>Hint: The more you hold the more you get!</strong>
-            </FarmAICard>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="body1">
-              Token fees fulfill one purpose: To help token economy growing.
-              We adjusted the tokenomics to our best knowledge in order to balance between token price stabilization, project evolvement 
-              and investing incentives to ensure long-term health of our project and the investment of our holders.
-              We will fine-tune the tokenomics from time to time in order to keep in sync with the current market situation and project performance.
-            </Typography>
-          </Grid>
+          <Tokenomics />
         </Grid>
       </Grid>
     </ContentBox>

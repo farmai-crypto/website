@@ -40,11 +40,7 @@ const nunito = Nunito({ subsets: ['latin'], fallback: ['"Roboto", "Helvetica", "
 
 const useStyles = makeStyles(() => ({
   mainScreenBuyButton: {
-    marginTop: "5vh",
-    backgroundColor: "#25624ff0",
-    '&:hover': {
-      backgroundColor: '#48af8ff0',
-    }
+    marginTop: "5vh"
   },
   ...styles
 }));
@@ -82,7 +78,7 @@ export default function Index(props) {
                 <h3 className={classes.subtitle}>
                   Utilize technology to enhance farming - for everyone.
                 </h3>
-                <Button className={classes.mainScreenBuyButton} href="/#how-to-buy">Buy now</Button>
+                <Button className={[classes.farmAIButton, classes.mainScreenBuyButton].join(" ")} href="/#how-to-buy">Buy now</Button>
               </div>
             </GridItem>
           </GridContainer>

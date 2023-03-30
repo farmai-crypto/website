@@ -180,6 +180,17 @@ const roseCardHeader = {
   background: "linear-gradient(60deg, #ec407a, #d81b60)",
   ...roseBoxShadow,
 };
+const farmAISecondaryCardHeader = {
+  color: "#fff",
+  background: "#608bc1",
+  ...roseBoxShadow,
+};
+const farmAITertiaryCardHeader = {
+  color: "#fff",
+  background: "#cd933c",
+  ...roseBoxShadow,
+};
+
 const cardActions = {
   margin: "0 20px 10px",
   paddingTop: "10px",
@@ -227,6 +238,13 @@ const cardSubtitle = {
   marginTop: "-.375rem",
 };
 
+const farmAIButton = {
+  backgroundColor: "#25624ff0",
+  '&:hover': {
+    backgroundColor: '#48af8ff0',
+  }
+}
+
 export {
   hexToRGBAlpha,
   //variables
@@ -256,6 +274,8 @@ export {
   infoCardHeader,
   primaryCardHeader,
   roseCardHeader,
+  farmAISecondaryCardHeader,
+  farmAITertiaryCardHeader,
   cardActions,
   cardHeader,
   defaultBoxShadow,
@@ -263,4 +283,5 @@ export {
   cardTitle,
   cardLink,
   cardSubtitle,
+  farmAIButton
 };

@@ -49,19 +49,19 @@ export default function SectionWhatWeDo() {
           </Grid>
           <Grid item xs={12}>
             <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-              <ListItem disablePadding>
+              <ListItem disablepadding>
                 <ListItemIcon>
                   <Landscape style={{color: "#28946e"}} />
                 </ListItemIcon>
                 <ListItemText primary="Autonomous agriculture" />
               </ListItem>
-              <ListItem disablePadding>
+              <ListItem disablepadding>
                 <ListItemIcon>
                   <Timelapse style={{color: "#28946e"}} />
                 </ListItemIcon>
                 <ListItemText primary="Demand-driven supply chain" />
               </ListItem>
-              <ListItem disablePadding>
+              <ListItem disablepadding>
                 <ListItemIcon>
                   <Memory style={{color: "#28946e"}} />
                 </ListItemIcon>
@@ -70,7 +70,7 @@ export default function SectionWhatWeDo() {
             </List>
           </Grid>
           <Grid item>
-            <Button>Read the whitepaper</Button>
+            <Button className={classes.farmAIButton}>Read the whitepaper</Button>
           </Grid>
         </Grid>
         <Grid item container sm={6} xs={12} justify="flex-end">

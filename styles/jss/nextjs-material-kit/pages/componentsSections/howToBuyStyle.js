@@ -1,4 +1,4 @@
-import { container, title } from "/styles/jss/nextjs-material-kit.js";
+import { container, title, farmAIButton } from "/styles/jss/nextjs-material-kit.js";
 import customCheckboxRadioSwitch from "/styles/jss/nextjs-material-kit/customCheckboxRadioSwitch.js";
 
 const whatWeDoStyle = {
@@ -27,6 +27,7 @@ const whatWeDoStyle = {
     height: "17px",
     color: "#FFFFFF"
   },
+  farmAIButton,
   ...customCheckboxRadioSwitch
 };
 
