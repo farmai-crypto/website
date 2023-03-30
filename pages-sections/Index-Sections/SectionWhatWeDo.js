@@ -74,7 +74,7 @@ export default function SectionWhatWeDo() {
           </Grid>
         </Grid>
         <Grid item container sm={6} xs={12} justify="flex-end">
-          <Image src={farmingSky} width={300} style={{opacity: "0.9", borderRadius: "5px"}} alt="farming-hands" />
+          <Image src={farmingSky} width={300} style={{opacity: "0.9", borderRadius: "5px", maxWidth: "100%"}} alt="farming-hands" />
         </Grid>
       </Grid>
     </ContentBox>
