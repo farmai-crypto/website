@@ -18,7 +18,7 @@ const allStyles = {
   },
   centerSmall: {
     "@media(max-width: 900px)": {
-      margin: "auto"
+      textAlign: "center"
     }
   },
   ...styles
@@ -164,7 +164,7 @@ export default function SectionHowToBuy() {
   return (
     <ContentBox id="how-to-buy" title="How to buy">
       <Grid container justify="center">
-        <Grid item container md={6} xs={12}>
+        <Grid item container xs={12} md={6}>
           <Grid item>
             <h3 style={{marginTop: 0}}>Participating in FarmAI</h3>
           </Grid>
@@ -184,12 +184,12 @@ export default function SectionHowToBuy() {
               <ListingItem icon={<Code  style={{color: "#28946e"}} />} text="In-house quality software development" />
             </Listing>
           </Grid>
-          <Grid item className={classes.centerSmall}>
+          <Grid item xs={12} className={classes.centerSmall}>
             <Button className={classes.uniswapBuyButton} href={uniswapSwapAddress} target="_blank">Buy on Uniswap</Button>
           </Grid>
         </Grid>
-        <Grid item xs={0} sm={0} md={1} />
-        <Grid item xs={12} sm={8} md={5}>
+        <Grid item xs={0} sm={0} md={1} lg={2} />
+        <Grid item xs={12} sm={8} md={5} lg={4}>
           <UniswapWidget />
           <p style={{textAlign: "center", fontSize: "1rem"}}>Uniswap exchange</p>
         </Grid>

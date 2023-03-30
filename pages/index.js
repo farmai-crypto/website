@@ -88,7 +88,7 @@ export default function Index(props) {
       <Grid container justify="center" className={classes.mainContent}>
         <Grid item xs={12}>
           <Grid container justify="center">
-            <Grid item sm={10} xs={11}>
+            <Grid item sm={9} xs={11}>
               <SectionWhatWeDo />
               <SectionHowToBuy />
               <SectionWhoWeAre />
