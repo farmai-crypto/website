@@ -16,6 +16,11 @@ const allStyles = {
       backgroundColor: 'rgb(169 45 111 / 90%)',
     }
   },
+  centerSmall: {
+    "@media(max-width: 900px)": {
+      margin: "auto"
+    }
+  },
   ...styles
 }
 const useStyles = makeStyles(allStyles);
@@ -54,7 +59,7 @@ const Tokenomics = () => {
         <div id="nav-tabs">
           <h3>Tokenomics</h3>
           <GridContainer>
-            <GridItem xs={12} md={6}>
+            <GridItem xs={12} lg={6} style={{padding: "0px 10px"}}>
               <CustomTabs
                 headerColor="farmAISecondary"
                 title="5% buy"
@@ -99,7 +104,7 @@ const Tokenomics = () => {
                 )}
               />
             </GridItem>
-            <GridItem xs={12} md={6}>
+            <GridItem xs={12} lg={6} style={{padding: "0px 10px"}}>
             <CustomTabs
                 headerColor="farmAITertiary"
                 title="10% sell"
@@ -159,24 +164,32 @@ export default function SectionHowToBuy() {
   return (
     <ContentBox id="how-to-buy" title="How to buy">
       <Grid container justify="center">
-        <Grid item sm={6} xs={12}>
-          <h3 style={{marginTop: 0}}>Participating in FarmAI</h3>
-          <p style={{fontSize: "1rem"}}>
-            To take a step forward and get yourself a share of #FAI, you can invest into our token via the Uniswap widget or by clicking on the button below.
-            We have a lot to provide for the future, so joining our community is key to staying updated and entering early allows to you to grow big profits over the course of our project.
-            Want to get a small introduction into your benefits joining us? <br />
-            We got you.
-          </p>
-          <Listing>
-            <ListingItem icon={<School  style={{color: "#28946e"}} />} text="Professional team with multiple years of experience" />
-            <ListingItem icon={<HourglassFull  style={{color: "#28946e"}} />} text="Long-term project that builds to stay" />
-            <ListingItem icon={<MonetizationOn  style={{color: "#28946e"}} />} text="Automatic reward system benefiting holders for their investment" />
-            <ListingItem icon={<Code  style={{color: "#28946e"}} />} text="In-house quality software development" />
-          </Listing>
-          <Button className={classes.uniswapBuyButton} href={uniswapSwapAddress} target="_blank">Buy on Uniswap</Button>
+        <Grid item container md={6} xs={12}>
+          <Grid item>
+            <h3 style={{marginTop: 0}}>Participating in FarmAI</h3>
+          </Grid>
+          <Grid item>
+            <p style={{fontSize: "1rem"}}>
+              To take a step forward and get yourself a share of #FAI, you can invest into our token via the Uniswap widget or by clicking on the button below.
+              We have a lot to provide for the future, so joining our community is key to staying updated and entering early allows to you to grow big profits over the course of our project.
+              Want to get a small introduction into your benefits joining us? <br />
+              We got you.
+            </p>
+          </Grid>
+          <Grid item>
+            <Listing>
+              <ListingItem icon={<School  style={{color: "#28946e"}} />} text="Professional team with multiple years of experience" />
+              <ListingItem icon={<HourglassFull  style={{color: "#28946e"}} />} text="Long-term project that builds to stay" />
+              <ListingItem icon={<MonetizationOn  style={{color: "#28946e"}} />} text="Automatic reward system benefiting holders for their investment" />
+              <ListingItem icon={<Code  style={{color: "#28946e"}} />} text="In-house quality software development" />
+            </Listing>
+          </Grid>
+          <Grid item className={classes.centerSmall}>
+            <Button className={classes.uniswapBuyButton} href={uniswapSwapAddress} target="_blank">Buy on Uniswap</Button>
+          </Grid>
         </Grid>
-        <Grid item xs={2} />
-        <Grid item sm={4} xs={12}>
+        <Grid item xs={0} sm={0} md={1} />
+        <Grid item xs={12} sm={8} md={5}>
           <UniswapWidget />
           <p style={{textAlign: "center", fontSize: "1rem"}}>Uniswap exchange</p>
         </Grid>

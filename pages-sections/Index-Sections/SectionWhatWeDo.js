@@ -30,7 +30,15 @@ import farmingSky from "/public/img/sections/what-we-do/farm-sky.jpg";
 import ContentBox from "../../components/ContentBox/ContentBox";
 import { Landscape, Memory, Timelapse } from "@material-ui/icons";
 
-const useStyles = makeStyles(styles);
+const allStyles = {
+  centerSmall: {
+    "@media(max-width: 600px)": {
+      margin: "auto"
+    }
+  },
+  ...styles
+}
+const useStyles = makeStyles(allStyles);
 
 export default function SectionWhatWeDo() {
   const classes = useStyles();
@@ -69,12 +77,12 @@ export default function SectionWhatWeDo() {
               </ListItem>
             </List>
           </Grid>
-          <Grid item>
+          <Grid item className={classes.centerSmall}>
             <Button className={classes.farmAIButton}>Read the whitepaper</Button>
           </Grid>
         </Grid>
         <Grid item container sm={6} xs={12} justify="flex-end">
-          <Image src={farmingSky} width={300} style={{opacity: "0.9", borderRadius: "5px", maxWidth: "100%"}} alt="farming-hands" />
+          <Image src={farmingSky} width={300} style={{opacity: "0.9", borderRadius: "5px", maxWidth: "100%"}} alt="farming-hands" className={classes.centerSmall} />
         </Grid>
       </Grid>
     </ContentBox>
