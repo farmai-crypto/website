@@ -4,6 +4,7 @@ import { ServerStyleSheets } from "@material-ui/styles";
 
 class MyDocument extends Document {
   render() {
+
     return (
       <Html lang="en" style={{scrollBehavior: "smooth"}}>
         <Head>
@@ -25,6 +26,8 @@ class MyDocument extends Document {
             href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
             rel="stylesheet"
           />
+          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+          <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
         </Head>
         <body>
           <div id="page-transition"></div>

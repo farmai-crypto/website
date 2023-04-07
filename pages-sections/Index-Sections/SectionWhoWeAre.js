@@ -38,14 +38,18 @@ export default function SectionWhoWeAre() {
       <Grid container justify="center">
         <Grid item container justify="space-evenly" spacing={2}>
           <Grid item>
-            <MemberCard image="/img/people/kojo.png" title="Kojo">
-              Project founder and CEO
-            </MemberCard>
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="500">
+              <MemberCard image="/img/people/kojo.png" title="Kojo">
+                Project founder and CEO
+              </MemberCard>
+            </div>
           </Grid>
           <Grid item>
-            <MemberCard image="/img/people/trickz.png" title="Dominik">
-              Blockchain developer and CIO
-            </MemberCard>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="500">
+              <MemberCard image="/img/people/trickz.png" title="Dominik">
+                Blockchain developer and CIO
+              </MemberCard>
+            </div>
           </Grid>
         </Grid>
         <Grid item>

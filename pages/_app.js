@@ -25,6 +25,9 @@ import PageChange from "/components/PageChange/PageChange.js";
 
 import "/styles/scss/nextjs-material-kit.scss?v=1.2.0";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
   document.body.classList.add("body-page-transition");
@@ -62,6 +65,7 @@ export default class MyApp extends App {
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 `);
+    AOS.init();
     document.insertBefore(comment, document.documentElement);
   }
   static async getInitialProps({ Component, router, ctx }) {
@@ -75,6 +79,8 @@ export default class MyApp extends App {
   }
   render() {
     const { Component, pageProps } = this.props;
+
+    
 
     return (
       <React.Fragment>

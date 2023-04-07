@@ -176,25 +176,31 @@ export default function SectionHowToBuy() {
               We got you.
             </p>
           </Grid>
-          <Grid item>
-            <Listing>
-              <ListingItem icon={<School  style={{color: "#28946e"}} />} text="Professional team with multiple years of experience" />
-              <ListingItem icon={<HourglassFull  style={{color: "#28946e"}} />} text="Long-term project that builds to stay" />
-              <ListingItem icon={<MonetizationOn  style={{color: "#28946e"}} />} text="Automatic reward system benefiting holders for their investment" />
-              <ListingItem icon={<Code  style={{color: "#28946e"}} />} text="In-house quality software development" />
-            </Listing>
-          </Grid>
-          <Grid item xs={12} className={classes.centerSmall}>
-            <Button className={classes.uniswapBuyButton} href={uniswapSwapAddress} target="_blank">Buy on Uniswap</Button>
-          </Grid>
+          <div data-aos="fade-right" data-aos-duration="500">
+            <Grid item>
+                <Listing>
+                  <ListingItem icon={<School  style={{color: "#28946e"}} />} text="Professional team with multiple years of experience" />
+                  <ListingItem icon={<HourglassFull  style={{color: "#28946e"}} />} text="Long-term project that builds to stay" />
+                  <ListingItem icon={<MonetizationOn  style={{color: "#28946e"}} />} text="Automatic reward system benefiting holders for their investment" />
+                  <ListingItem icon={<Code  style={{color: "#28946e"}} />} text="In-house quality software development" />
+                </Listing>
+            </Grid>
+            <Grid item xs={12} className={classes.centerSmall}>
+              <Button className={classes.uniswapBuyButton} href={uniswapSwapAddress} target="_blank">Buy on Uniswap</Button>
+            </Grid>
+          </div>
         </Grid>
         <Grid item xs={0} sm={0} md={1} lg={2} />
         <Grid item xs={12} sm={8} md={5} lg={4}>
-          <UniswapWidget />
-          <p style={{textAlign: "center", fontSize: "1rem"}}>Uniswap exchange</p>
+          <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
+            <UniswapWidget />
+            <p style={{textAlign: "center", fontSize: "1rem"}}>Uniswap exchange</p>
+          </div>
         </Grid>
         <Grid item xs={12}>
-          <Tokenomics />
+          <div data-aos="flip-up" data-aos-duration="750" data-aos-offset="150">
+            <Tokenomics />
+          </div>
         </Grid>
       </Grid>
     </ContentBox>

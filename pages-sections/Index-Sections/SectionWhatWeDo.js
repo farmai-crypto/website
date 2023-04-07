@@ -40,11 +40,27 @@ const allStyles = {
 }
 const useStyles = makeStyles(allStyles);
 
+const InitFadeOnScroll = (threshold) => {
+  var runFadeAnimation = true;
+
+  $(document).ready(() => {
+    $(window).on("scroll", () => {
+      let container = document.getElementById("img-farm-sky");
+      let offsetTop = container.getBoundingClientRect().top;
+
+      if(offsetTop <= threshold && runFadeAnimation){
+        runFadeAnimation = false;
+        alert("NOW");
+      }
+    });
+  });
+}
+
 export default function SectionWhatWeDo() {
   const classes = useStyles();
   
   return (
-    <ContentBox id="what-we-do" title="Farming meets AI" className={classes.mainContainer}>
+    <ContentBox id="what-we-do" title="Farming meets AI" className={[classes.mainContainer, "what-we-do"].join(" ")}>
       <Grid container spacing={2} className={classes.container}>
         <Grid container item sm={6} xs={12}>
           <Grid item xs={12}>
@@ -57,32 +73,38 @@ export default function SectionWhatWeDo() {
           </Grid>
           <Grid item xs={12}>
             <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-              <ListItem disablepadding>
-                <ListItemIcon>
-                  <Landscape style={{color: "#28946e"}} />
-                </ListItemIcon>
-                <ListItemText primary="Autonomous agriculture" />
-              </ListItem>
-              <ListItem disablepadding>
-                <ListItemIcon>
-                  <Timelapse style={{color: "#28946e"}} />
-                </ListItemIcon>
-                <ListItemText primary="Demand-driven supply chain" />
-              </ListItem>
-              <ListItem disablepadding>
-                <ListItemIcon>
-                  <Memory style={{color: "#28946e"}} />
-                </ListItemIcon>
-                <ListItemText primary="Next-gen technology" />
-              </ListItem>
+              <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="500">
+                <ListItem disablepadding>
+                  <ListItemIcon>
+                    <Landscape style={{color: "#28946e"}} />
+                  </ListItemIcon>
+                  <ListItemText primary="Autonomous agriculture" />
+                  </ListItem>
+                <ListItem disablepadding>
+                    <ListItemIcon>
+                      <Timelapse style={{color: "#28946e"}} />
+                    </ListItemIcon>
+                    <ListItemText primary="Demand-driven supply chain" />
+                </ListItem>
+                <ListItem disablepadding>
+                    <ListItemIcon>
+                      <Memory style={{color: "#28946e"}} />
+                    </ListItemIcon>
+                    <ListItemText primary="Next-gen technology" />
+                </ListItem>
+              </div>
             </List>
           </Grid>
           <Grid item className={classes.centerSmall}>
-            <Button className={classes.farmAIButton}>Read the whitepaper</Button>
+            <div data-aos="fade-right" data-aos-duration="500">
+              <Button className={classes.farmAIButton}>Read the whitepaper</Button>
+            </div>
           </Grid>
         </Grid>
         <Grid item container sm={6} xs={12} justify="flex-end">
-          <Image src={farmingSky} width={300} style={{opacity: "0.9", borderRadius: "5px", maxWidth: "100%"}} alt="farming-hands" className={classes.centerSmall} />
+          <div data-aos="fade-left" data-aos-offset="300" data-aos-duration="500">
+            <Image src={farmingSky} id="img-farm-sky" width={300} style={{opacity: "0.9", borderRadius: "5px", maxWidth: "100%"}} alt="farming-hands" className={classes.centerSmall} />
+          </div>
         </Grid>
       </Grid>
     </ContentBox>
