@@ -45,7 +45,7 @@ export default function SectionWhoWeAre() {
             </div>
           </Grid>
           <Grid item>
-            <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="500">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="500">
               <MemberCard image="/img/people/trickz.png" title="Dominik">
                 Blockchain developer and CIO
               </MemberCard>

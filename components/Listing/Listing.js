@@ -2,7 +2,7 @@ import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 
 const ListingItem = ({icon, text}) => {
   return (
-    <ListItem disablepadding>
+    <ListItem disablepadding="true">
       <ListItemIcon>
         {icon}
       </ListItemIcon>

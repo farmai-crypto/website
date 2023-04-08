@@ -74,19 +74,19 @@ export default function SectionWhatWeDo() {
           <Grid item xs={12}>
             <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
               <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="500">
-                <ListItem disablepadding>
+                <ListItem disablepadding="true">
                   <ListItemIcon>
                     <Landscape style={{color: "#28946e"}} />
                   </ListItemIcon>
                   <ListItemText primary="Autonomous agriculture" />
                   </ListItem>
-                <ListItem disablepadding>
+                <ListItem disablepadding="true">
                     <ListItemIcon>
                       <Timelapse style={{color: "#28946e"}} />
                     </ListItemIcon>
                     <ListItemText primary="Demand-driven supply chain" />
                 </ListItem>
-                <ListItem disablepadding>
+                <ListItem disablepadding="true">
                     <ListItemIcon>
                       <Memory style={{color: "#28946e"}} />
                     </ListItemIcon>
@@ -102,7 +102,7 @@ export default function SectionWhatWeDo() {
           </Grid>
         </Grid>
         <Grid item container sm={6} xs={12} justify="flex-end">
-          <div data-aos="fade-left" data-aos-offset="300" data-aos-duration="500">
+          <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="500">
             <Image src={farmingSky} id="img-farm-sky" width={300} style={{opacity: "0.9", borderRadius: "5px", maxWidth: "100%"}} alt="farming-hands" className={classes.centerSmall} />
           </div>
         </Grid>
