@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef, useEffect, React } from "react";
 // plugin that creates slider
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -6,8 +6,11 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/howToBuyStyle.js";
-import { Grid, Typography } from "@material-ui/core";
+import { Chip, Grid, Typography } from "@material-ui/core";
 import Button from "/components/CustomButtons/Button.js";
+
+import Chart from 'chart.js/auto';
+
 
 const allStyles = {
   uniswapBuyButton: {
@@ -42,14 +45,10 @@ const Tokenomics = () => {
   const tokenomics = {
     marketing: {
       buy: "3%",
-      sell: "6%",
+      sell: "3%",
     },
     liquidity: {
-      buy: "1%",
-      sell: "2%",
-    },
-    rewards: {
-      buy: "1%",
+      buy: "2%",
       sell: "2%",
     },
   }
@@ -57,9 +56,8 @@ const Tokenomics = () => {
     <div>
       <div>
         <div id="nav-tabs">
-          <h3>Tokenomics</h3>
           <GridContainer>
-            <GridItem xs={12} lg={6} style={{padding: "0px 10px"}}>
+            <GridItem xs={12} style={{padding: "0px 10px"}}>
               <CustomTabs
                 headerColor="farmAISecondary"
                 title="5% buy"
@@ -84,30 +82,19 @@ const Tokenomics = () => {
                       </p>
                     )
                   },
-                  {
-                    tabName: `${tokenomics.rewards.buy} Rewards`,
-                    tabIcon: MonetizationOn,
-                    tabContent: (
-                      <p className={classes.textCenter}>
-                        Get a good bang for your buck. Including reward fees helps our holders to get something back for their investment and their trust into our project.<br />
-                        <strong>Hint: The more you hold the more you get!</strong>
-                      </p>
-                    )
-                  }
                 ]}
                 summary={(
                   <Listing>
                     <ListingItem icon={<Assessment  style={{color: "rgb(52 143 171)"}} />} text={`${tokenomics.marketing.buy} Marketing`} />
                     <ListingItem icon={<Opacity  style={{color: "rgb(215 69 177)"}} />} text={`${tokenomics.liquidity.buy} Liquidity`} />
-                    <ListingItem icon={<MonetizationOn  style={{color: "rgb(223 188 60)"}} />} text={`${tokenomics.rewards.buy} Rewards`} />
                   </Listing>
                 )}
               />
             </GridItem>
-            <GridItem xs={12} lg={6} style={{padding: "0px 10px"}}>
+            <GridItem xs={12} style={{padding: "0px 10px"}}>
             <CustomTabs
                 headerColor="farmAITertiary"
-                title="10% sell"
+                title="5% sell"
                 tabs={[
                   {
                     tabName: `${tokenomics.marketing.sell} Marketing`,
@@ -129,22 +116,11 @@ const Tokenomics = () => {
                       </p>
                     )
                   },
-                  {
-                    tabName: `${tokenomics.rewards.sell} Rewards`,
-                    tabIcon: MonetizationOn,
-                    tabContent: (
-                      <p className={classes.textCenter}>
-                        Get a good bang for your buck. Including reward fees helps our holders to get something back for their investment and their trust into our project.<br />
-                        <strong>Hint: The more you hold the more you get!</strong>
-                      </p>
-                    )
-                  }
                 ]}
                 summary={(
                   <Listing>
                     <ListingItem icon={<Assessment  style={{color: "rgb(52 143 171)"}} />} text={`${tokenomics.marketing.sell} Marketing`} />
                     <ListingItem icon={<Opacity  style={{color: "rgb(215 69 177)"}} />} text={`${tokenomics.liquidity.sell} Liquidity`} />
-                    <ListingItem icon={<MonetizationOn  style={{color: "rgb(223 188 60)"}} />} text={`${tokenomics.rewards.sell} Rewards`} />
                   </Listing>
                 )}
               />
@@ -153,6 +129,73 @@ const Tokenomics = () => {
         </div>
       </div>
     </div>
+  );
+}
+
+const Charts = () => {
+  const canvas = useRef();
+
+  useEffect(() => {
+    const ctx = canvas.current;
+
+    let chartStatus = Chart.getChart('myChart');
+      if (chartStatus != undefined) {
+        chartStatus.destroy();
+    }
+
+    const chart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['CEX', 'DEX', 'Future Hires', 'Marketing and Development', 'Owners'],
+        datasets: [
+          {
+            label: 'Percentage',
+            data: [45, 10, 10, 15, 20],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)',
+              'rgba(153, 102, 255, 0.8)',
+              'rgba(255, 159, 64, 0.8)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)',
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: "#fff"
+            }
+          },
+        },
+      },
+    });
+  }, []);
+
+  return (
+    <Grid container spacing={2}>
+      <Grid item xs={12} style={{textAlign: "center"}}>
+        <Chip label="1,000,000 Total Token Supply" />
+      </Grid>
+      <Grid item xs={12}>
+      <div style={{display: "flex", justifyContent: "center", width: "100%", height: "50vh"}}>
+        <canvas id="myChart" ref={canvas}></canvas>
+      </div>
+      </Grid>
+    </Grid>
   );
 }
 
@@ -197,9 +240,19 @@ export default function SectionHowToBuy() {
             <p style={{textAlign: "center", fontSize: "1rem"}}>Uniswap exchange</p>
           </div>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item container xs={12}>
           <div data-aos="flip-up" data-aos-duration="750" data-aos-offset="150">
-            <Tokenomics />
+            <Grid item container xs={12}>
+              <Grid item xs={12} style={{marginBottom: "1rem"}}>
+                <h3>Tokenomics</h3>
+              </Grid>
+              <Grid item xs={6}>
+                <Charts />
+              </Grid>
+              <Grid item xs={6}>
+                <Tokenomics />
+              </Grid>
+            </Grid>
           </div>
         </Grid>
       </Grid>
