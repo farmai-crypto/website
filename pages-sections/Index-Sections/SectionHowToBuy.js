@@ -10,6 +10,7 @@ import { Chip, Grid, Typography } from "@material-ui/core";
 import Button from "/components/CustomButtons/Button.js";
 
 import Chart from 'chart.js/auto';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 
 const allStyles = {
@@ -144,6 +145,7 @@ const Charts = () => {
     }
 
     const chart = new Chart(ctx, {
+      plugins: [ChartDataLabels],
       type: 'pie',
       data: {
         labels: ['CEX', 'DEX', 'Future Hires', 'Marketing and Development', 'Owners'],
@@ -172,6 +174,7 @@ const Charts = () => {
         ],
       },
       options: {
+        animation: false,
         responsive: true,
         plugins: {
           legend: {
@@ -180,6 +183,18 @@ const Charts = () => {
               color: "#fff"
             }
           },
+          datalabels: {
+            formatter: (value, ctx) => {
+                let sum = 0;
+                let dataArr = ctx.chart.data.datasets[0].data;
+                dataArr.map(data => {
+                    sum += data;
+                });
+                let percentage = (value*100 / sum).toFixed(2)+"%";
+                return percentage;
+            },
+            color: '#fff',
+         },
         },
       },
     });
