@@ -36,6 +36,7 @@ import SectionHowToBuy from "../pages-sections/Index-Sections/SectionHowToBuy";
 import SectionWhoWeAre from "../pages-sections/Index-Sections/SectionWhoWeAre";
 import SectionServices from "../pages-sections/Index-Sections/SectionServices";
 import SectionSocials from "../pages-sections/Index-Sections/SectionSocials";
+import SectionRoadmap from "../pages-sections/Index-Sections/SectionRoadmap";
 const nunito = Nunito({ subsets: ['latin'], fallback: ['"Roboto", "Helvetica", "Arial", sans-serif']})
 
 const useStyles = makeStyles(() => ({
@@ -91,6 +92,7 @@ export default function Index(props) {
             <Grid item sm={9} xs={11}>
               <SectionWhatWeDo />
               <SectionHowToBuy />
+              <SectionRoadmap />
               <SectionWhoWeAre />
               <SectionSocials />
             </Grid>
