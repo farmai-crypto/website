@@ -190,7 +190,7 @@ const Charts = () => {
                 dataArr.map(data => {
                     sum += data;
                 });
-                let percentage = (value*100 / sum).toFixed(2)+"%";
+                let percentage = (value*100 / sum)+"%";
                 return percentage;
             },
             color: '#fff',
@@ -256,15 +256,15 @@ export default function SectionHowToBuy() {
           </div>
         </Grid>
         <Grid item container xs={12}>
-          <div data-aos="flip-up" data-aos-duration="750" data-aos-offset="150">
+          <div data-aos="fade-up" data-aos-duration="750" data-aos-offset="350">
             <Grid item container xs={12}>
               <Grid item xs={12} style={{marginBottom: "1rem"}}>
                 <h3>Tokenomics</h3>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={12} sm={6}>
                 <Charts />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={12} sm={6}>
                 <Tokenomics />
               </Grid>
             </Grid>
