@@ -152,7 +152,7 @@ const Charts = () => {
         datasets: [
           {
             label: 'Percentage',
-            data: [45, 10, 10, 15, 20],
+            data: [45, 20, 5, 10, 20],
             backgroundColor: [
               'rgba(255, 99, 132, 0.8)',
               'rgba(54, 162, 235, 0.8)',
