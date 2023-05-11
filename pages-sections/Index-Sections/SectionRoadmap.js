@@ -40,6 +40,7 @@ import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import CustomTabs from '../../components/CustomTabs/CustomTabs';
 import HourglassBottom from "../../components/Icons/HourglassBottom";
+import Circle from "../../components/Icons/Circle";
 
 const CheckedListItem = ({title}) => {
   return <ListingItem icon={<Check style={{color: "#398756"}} />} style={{padding: 0}} text={title} />
@@ -50,7 +51,7 @@ const ActiveListItem = ({title}) => {
 }
 
 const InactiveListItem = ({title}) => {
-  return <ListingItem icon={<HourglassEmpty style={{color: "#41413ae6"}} />} style={{padding: 0}} text={title} />
+  return <ListingItem icon={<Circle style={{fill: "rgb(110 107 100 / 60%)"}} />} style={{padding: 0}} text={title} />
 }
 
 const PhaseOne = () => {
