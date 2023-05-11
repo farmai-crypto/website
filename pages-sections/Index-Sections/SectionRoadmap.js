@@ -35,21 +35,22 @@ import FarmAICard from "../../components/Card/FarmAICard";
 import UniswapWidget from "../../components/web3/UniswapWidget";
 import ContentBox from "../../components/ContentBox/ContentBox";
 import { Listing, ListingItem } from "../../components/Listing/Listing";
-import { School , HourglassFull, MonetizationOn, Code, Face, Chat, Build, Assessment, Opacity, Check, Lens} from "@material-ui/icons";
+import { School , HourglassFull, MonetizationOn, Code, Face, Chat, Build, Assessment, Opacity, Check, Lens, HourglassEmpty} from "@material-ui/icons";
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import CustomTabs from '../../components/CustomTabs/CustomTabs';
+import HourglassBottom from "../../components/Icons/HourglassBottom";
 
 const CheckedListItem = ({title}) => {
   return <ListingItem icon={<Check style={{color: "#398756"}} />} style={{padding: 0}} text={title} />
 }
 
 const ActiveListItem = ({title}) => {
-  return <ListingItem icon={<Lens style={{color: "#e1d328e6 "}} />} style={{padding: 0}} text={title} />
+  return <ListingItem icon={<HourglassBottom style={{fill: "rgb(58 114 163 / 93%)"}} />} style={{padding: 0}} text={title} />
 }
 
 const InactiveListItem = ({title}) => {
-  return <ListingItem icon={<Lens style={{color: "#41413ae6"}} />} style={{padding: 0}} text={title} />
+  return <ListingItem icon={<HourglassEmpty style={{color: "#41413ae6"}} />} style={{padding: 0}} text={title} />
 }
 
 const PhaseOne = () => {
