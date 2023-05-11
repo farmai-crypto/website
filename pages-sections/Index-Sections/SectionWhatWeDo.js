@@ -30,6 +30,10 @@ import farmingSky from "/public/img/sections/what-we-do/farm-sky.jpg";
 import ContentBox from "../../components/ContentBox/ContentBox";
 import { Landscape, Memory, Timelapse } from "@material-ui/icons";
 
+import { Listing, ListingItem } from "../../components/Listing/Listing";
+import Ethereum from "../../components/Icons/Ethereum";
+import Monitoring from "../../components/Icons/Monitoring";
+
 const allStyles = {
   centerSmall: {
     "@media(max-width: 600px)": {
@@ -62,36 +66,33 @@ export default function SectionWhatWeDo() {
   return (
     <ContentBox id="what-we-do" title="Farming meets AI" className={[classes.mainContainer, "what-we-do"].join(" ")}>
       <Grid container spacing={2} className={classes.container}>
-        <Grid container item sm={6} xs={12}>
+        <Grid container item sm={7} lg={8} xs={12}>
           <Grid item xs={12}>
             <p style={{fontSize: "1rem"}}>
-              Artificial intelligence is ubiquitous nowadays.
-              It helps in automating tasks, empowers your Google search, drives your cleaning robotic device at home and assists you in executing trades on your trading platform.
-              The field of AI applicability seems to be endless and we want to use it to empower agriculture.
-              Agriculture is a vital part of human society and our belief is that we can leverage it to build an ecosystem where most work is done by AI itself - supervised by human beings.  
+            Farm AI is an AI-focused technology company that is committed to revolutionizing agriculture through the use of data-driven insights powered by artificial intelligence solutions.
+            Our goal is to help farmers make smarter decisions that lead to higher yields, reduced costs, and increased sustainability.
+            With the global population on the rise, it has become more important than ever to find innovative solutions that can feed our growing world while protecting our planet.
+            <br /><br />
+            Our team of experts have a deep understanding of the challenges facing modern agriculture and we are dedicated to finding solutions that can help farmers achieve their goals.
+            Through AI-powered tools, Farm AI Solutions will empower farmers to monitor their crop health, predict growth accuracy, diagnose diseases, promote efficient water usage, and optimize farming schedules according to weather data.
+            By providing farmers with access to these insights, we help them to make more informed decisions that drive down costs and maximize yields.
+            <br /><br />
+            To further enhance the value of our ecosystem, we will integrate blockchain technology to provide a secure and transparent way to store and share data.
+            Our focus on data management, traceability, automated contract signing, supply chain management, and improved means of payment through our native cryptocurrency token, $FAI, enables us to create a trustworthy and efficient ecosystem for all participants.
+            <br /><br />
+            With $FAI, we are creating a new paradigm in agriculture, incentivizing contributors through a governance model that rewards long-term participation and contributes to the growth and sustainability of the ecosystem.
+            Our ecosystem is built on trust, transparency, and collaboration, and we are excited to be at the forefront of this revolutionary change.
             </p>
           </Grid>
           <Grid item xs={12}>
             <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
               <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="500">
-                <ListItem disablepadding="true">
-                  <ListItemIcon>
-                    <Landscape style={{color: "#28946e"}} />
-                  </ListItemIcon>
-                  <ListItemText primary="Autonomous agriculture" />
-                  </ListItem>
-                <ListItem disablepadding="true">
-                    <ListItemIcon>
-                      <Timelapse style={{color: "#28946e"}} />
-                    </ListItemIcon>
-                    <ListItemText primary="Demand-driven supply chain" />
-                </ListItem>
-                <ListItem disablepadding="true">
-                    <ListItemIcon>
-                      <Memory style={{color: "#28946e"}} />
-                    </ListItemIcon>
-                    <ListItemText primary="Next-gen technology" />
-                </ListItem>
+                <Listing>
+                  <ListingItem icon={<Landscape style={{color: "#28946e"}} />} text="Autonomous agriculture" />
+                  <ListingItem icon={<Memory style={{color: "#28946e"}} />} text="Next-gen technology" />
+                  <ListingItem icon={<Monitoring style={{color: "#28946e", fill: "currentColor"}} />} text="Next-gen technology" />
+                  <ListingItem icon={<Ethereum style={{color: "#28946e", fill: "currentColor"}} />} text="Blockchain-based payment solution $FAI" />
+                </Listing>
               </div>
             </List>
           </Grid>
@@ -101,7 +102,7 @@ export default function SectionWhatWeDo() {
             </div>
           </Grid>
         </Grid>
-        <Grid item container sm={6} xs={12} justify="flex-end">
+        <Grid item container sm={5} lg={4} xs={12} justify="flex-end">
           <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="500">
             <Image src={farmingSky} id="img-farm-sky" width={300} style={{opacity: "0.9", borderRadius: "5px", maxWidth: "100%"}} alt="farming-hands" className={classes.centerSmall} />
           </div>

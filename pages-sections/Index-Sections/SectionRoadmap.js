@@ -54,11 +54,11 @@ const InactiveListItem = ({title}) => {
 
 const PhaseOne = () => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card style={{ maxWidth: 4000 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="200"
           image="/img/sections/roadmap/phase1.jpg"
           alt="green iguana"
         />
@@ -88,7 +88,7 @@ const PhaseTwo = () => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="200"
           image="/img/sections/roadmap/phase2.jpg"
           alt="green iguana"
         />
@@ -116,7 +116,7 @@ const PhaseThree = () => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="200"
           image="/img/sections/roadmap/phase3.png"
           alt="green iguana"
         />
