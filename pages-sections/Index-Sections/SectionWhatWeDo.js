@@ -90,7 +90,7 @@ export default function SectionWhatWeDo() {
                 <Listing>
                   <ListingItem icon={<Landscape style={{color: "#28946e"}} />} text="Autonomous agriculture" />
                   <ListingItem icon={<Memory style={{color: "#28946e"}} />} text="Next-gen technology" />
-                  <ListingItem icon={<Monitoring style={{color: "#28946e", fill: "currentColor"}} />} text="Next-gen technology" />
+                  <ListingItem icon={<Monitoring style={{color: "#28946e", fill: "currentColor"}} />} text="Blockchain-based data management" />
                   <ListingItem icon={<Ethereum style={{color: "#28946e", fill: "currentColor"}} />} text="Blockchain-based payment solution $FAI" />
                 </Listing>
               </div>
