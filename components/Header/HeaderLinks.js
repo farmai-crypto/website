@@ -64,7 +64,8 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="/#socials"
+          href="/files/whitepaper.pdf"
+          target="_blank"
           color="transparent"
           className={classes.navLink}
         >

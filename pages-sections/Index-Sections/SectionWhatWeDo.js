@@ -98,7 +98,7 @@ export default function SectionWhatWeDo() {
           </Grid>
           <Grid item className={classes.centerSmall}>
             <div data-aos="fade-right" data-aos-duration="500">
-              <Button className={classes.farmAIButton}>Read the whitepaper</Button>
+              <Button className={classes.farmAIButton} href="/files/whitepaper.pdf" target="_blank">Read the whitepaper</Button>
             </div>
           </Grid>
         </Grid>
