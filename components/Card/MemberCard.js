@@ -9,6 +9,7 @@ import Button from "/components/CustomButtons/Button.js";
 import imagesStyles from "/styles/jss/nextjs-material-kit/imagesStyles.js";
 
 import { cardTitle } from "/styles/jss/nextjs-material-kit.js";
+import { Grid } from "@material-ui/core";
 
 const styles = {
   ...imagesStyles,
@@ -21,16 +22,22 @@ export default function MemberCard({image, title, children}) {
   const classes = useStyles();
   return (
     <Card>
-      <img
-        style={{height: "320px", width: "100%", display: "block", backgroundColor: "rgb(80 145 191)", padding: "10px", objectFit: "contain"}}
-        className={classes.imgCardTop}
-        src={image}
-        alt="Card-img-cap"
-      />
-      <CardBody>
-        <h4 className={classes.cardTitle}>{title}</h4>
-        <p>{children}</p>
-      </CardBody>
+      <Grid container>
+        <Grid item xs={6}>
+          <img
+          style={{height: "320px", display: "block", backgroundColor: "rgb(80 145 191)", padding: "10px", objectFit: "contain"}}
+          className={classes.imgCardTop}
+          src={image}
+          alt="Card-img-cap"
+        />
+        </Grid>
+        <Grid item xs={6}>
+          <CardBody>
+            <h4 className={classes.cardTitle}>{title}</h4>
+            <p>{children}</p>
+          </CardBody>
+        </Grid>
+      </Grid>
     </Card>
   );
 }

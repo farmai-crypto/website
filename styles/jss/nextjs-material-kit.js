@@ -225,6 +225,7 @@ const title = {
 const cardTitle = {
   ...title,
   marginTop: ".625rem",
+  marginBottom: "0.3rem"
 };
 
 const cardLink = {

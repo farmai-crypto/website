@@ -27,8 +27,14 @@ import { Grid , Typography} from "@material-ui/core";
 import Image from "next/image";
 import MemberCard from "../../components/Card/MemberCard";
 import ContentBox from "../../components/ContentBox/ContentBox";
+import { Listing, ListingItem } from "../../components/Listing/Listing";
+import Circle from "../../components/Icons/Circle";
 
 const useStyles = makeStyles(styles);
+
+const InactiveListItem = ({title}) => {
+  return <ListingItem iconStyle={{minWidth: 0, paddingRight: "8px"}} icon={<Circle style={{fill: "rgb(110 107 100 / 60%)", width: "16px", height: "16px"}} />} style={{padding: 0}} textStyle={{fontSize: "10px"}} text={title} />
+}
 
 export default function SectionWhoWeAre() {
   const classes = useStyles();
@@ -37,17 +43,24 @@ export default function SectionWhoWeAre() {
     <ContentBox id="who-we-are" title="Who we are">
       <Grid container justify="center">
         <Grid item container justify="space-evenly" spacing={2}>
-          <Grid item>
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="500">
+          <Grid item xs={6}>
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
               <MemberCard image="/img/people/kojo.png" title="Kojo">
                 Project founder and CEO
               </MemberCard>
             </div>
           </Grid>
-          <Grid item>
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="500">
+          <Grid item xs={6}>
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
               <MemberCard image="/img/people/trickz.png" title="Dominik">
                 Blockchain developer and CIO
+                <Listing>
+                  <InactiveListItem title="Prototype development" />
+                  <InactiveListItem title="Top tier CEX Listings" />
+                  <InactiveListItem title="Global Partnerships (Governments)" />
+                  <InactiveListItem title="Continuous team expansion" />
+                  <InactiveListItem title="Major Fundraisers (Top tier investors)" />
+                </Listing>
               </MemberCard>
             </div>
           </Grid>
