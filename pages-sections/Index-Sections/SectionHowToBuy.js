@@ -39,6 +39,7 @@ import { School , HourglassFull, MonetizationOn, Code, Face, Chat, Build, Assess
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import CustomTabs from '../../components/CustomTabs/CustomTabs';
+import { styled } from "@mui/system";
 
 
 const Tokenomics = () => {
@@ -203,7 +204,7 @@ const Charts = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} style={{textAlign: "center"}}>
-        <Chip label="1,000,000 Total Token Supply" />
+        <Chip sx={{backgroundColor: "#fff"}} label="1,000,000 Total Token Supply" />
       </Grid>
       <Grid item xs={12}>
       <div style={{display: "flex", justifyContent: "center", width: "100%", height: "50vh"}}>
@@ -213,6 +214,7 @@ const Charts = () => {
     </Grid>
   );
 }
+
 
 export default function SectionHowToBuy() {
   const classes = useStyles();

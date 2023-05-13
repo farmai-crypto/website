@@ -56,40 +56,42 @@ export default function SectionWhoWeAre() {
     <ContentBox id="who-we-are" title="Team">
       <Grid container justifyContent="center">
         <Grid item container justifyContent="space-evenly" spacing={2}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={9} xl={6}>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
               <MemberCard image="/img/people/kojo.png" title="Kojo">
                 <p>Project founder and CEO</p>
                 <Listing>
-                  <MemberCapabilityListItem title="Fact about Kojo #1" />
-                  <MemberCapabilityListItem title="Fact about Kojo #2" />
-                  <MemberCapabilityListItem title="Fact about Kojo #3" />
-                  <MemberCapabilityListItem title="Fact about Kojo #4" />
-                  <MemberCapabilityListItem title="Fact about Kojo #5" />
+                  <MemberCapabilityListItem title="12 years in blockchain" />
+                  <MemberCapabilityListItem title="12+ years in enterprise database/data engineering" />
+                  <MemberCapabilityListItem title="Blockchain enthusiast" />
+                  <MemberCapabilityListItem title="Soccer coach" />
+                  <MemberCapabilityListItem title="Husband & Father of 3 boys" />
                 </Listing>
-                <MemberQuote quote="Fancy quote" name="Kojo" />
+                <MemberQuote quote="Despise not small beginnings" name="Kojo" />
               </MemberCard>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={9} xl={6}>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
               <MemberCard image="/img/people/trickz.png" title="Dominik">
                 <p>Blockchain developer and CIO</p>
                 <Listing>
-                  <MemberCapabilityListItem title="+3 years experience in crypto" />
+                  <MemberCapabilityListItem title="+3 years experience in blockchain" />
                   <MemberCapabilityListItem title="+12 years experience in software development" />
                   <MemberCapabilityListItem title="Tech nerd" />
                   <MemberCapabilityListItem title="Website & Smart Contract developer" />
-                  <MemberCapabilityListItem title="Farm AI core team" />
+                  <MemberCapabilityListItem title="Computer Scientist" />
                 </Listing>
-                <MemberQuote quote="Fancy quote" name="Dominik" />
+                <MemberQuote quote="The borders you face are the borders you create. What's good about that? You can break them." name="Dominik" />
               </MemberCard>
             </div>
           </Grid>
         </Grid>
         <Grid item>
-          <Typography>You can count on many years of experience in the crypto field from our side which is why we thought of bringing it together within this project.</Typography>
-          <Typography>Our combined force of deep blockchain knowledge as well as the possibility to develop everything on our own will lead us to success.</Typography>
+          <Typography>
+            You can count on many years of experience in the crypto field from our side which is why we thought of bringing it together within this project.
+            Our combined force of deep blockchain knowledge as well as the possibility to develop everything on our own will lead us to success.
+          </Typography>
         </Grid>
       </Grid>
     </ContentBox>

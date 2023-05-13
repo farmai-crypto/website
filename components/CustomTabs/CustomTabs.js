@@ -27,8 +27,8 @@ const theme = createTheme({
     MuiTabs: {
       // Name of the slot
       flexContainer: {
-        display: "flex",
-        justifyContent: "end",
+        display: "flexx",
+        justifyContent: "flex-end",
         [breakpoints.down(600)]: {
           display: "none"
         },
@@ -36,6 +36,16 @@ const theme = createTheme({
     },
   },
 });
+
+const StyledTabs = styled(Tabs)(() => ({
+  '& .MuiTabs-flexContainer': {
+    justifyContent: "flex-end"
+  },
+  '& .MuiTab-iconWrapper': {
+    marginBottom: 0,
+    marginRight: "6px"
+  }
+}));
 
 
 export default function CustomTabs(props) {
@@ -56,7 +66,7 @@ export default function CustomTabs(props) {
       <CardHeader color={headerColor} plain={plainTabs}>
         {title !== undefined ? <div className={cardTitle}>{title}</div> : null}
         <ThemeProvider theme={theme}>
-          <Tabs
+          <StyledTabs
             value={value}
             onChange={handleChange}
             classes={{
@@ -90,7 +100,7 @@ export default function CustomTabs(props) {
                 />
               );
             })}
-          </Tabs>
+          </StyledTabs>
         </ThemeProvider>
       </CardHeader>
       <CardBody>

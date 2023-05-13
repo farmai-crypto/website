@@ -19,8 +19,10 @@ const customTabsStyle = {
   },
   tabsRoot: {
     minHeight: "unset !important",
+    justifyContent: "flex-end"
   },
   tabRootButton: {
+    flexDirection: "row",
     minHeight: "unset !important",
     minWidth: "unset !important",
     width: "unset !important",
