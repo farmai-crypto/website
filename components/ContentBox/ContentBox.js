@@ -1,13 +1,13 @@
 import React from "react";
 // material-ui components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/styles";
 // core components
 import Card from "/components/Card/Card.js";
 import CardBody from "/components/Card/CardBody.js";
 import Button from "/components/CustomButtons/Button.js";
 
 import contentBoxStyle from "/styles/jss/farmai/components/contentBoxStyle.js";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 
 const styles = {
   ...contentBoxStyle,

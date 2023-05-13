@@ -1,7 +1,7 @@
 import React from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
+// @mui components
+import { makeStyles } from "@mui/styles";
+// @mui/icons-material
 
 // core components
 import GridContainer from "/components/Grid/GridContainer.js";
@@ -16,7 +16,7 @@ export default function SectionCompletedExamples() {
   return (
     <div className={classes.section}>
       <div className={classes.container}>
-        <GridContainer justify="center">
+        <GridContainer justifyContent="center">
           <GridItem xs={12} sm={12} md={8}>
             <h2>Completed with examples</h2>
             <h4>

@@ -1,9 +1,9 @@
 import React from "react";
 // react components for routing our app without refresh
 import Link from "next/link";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
+// @mui components
+import { makeStyles } from "@mui/styles";
+// @mui/icons-material
 
 // core components
 import GridContainer from "/components/Grid/GridContainer.js";
@@ -19,7 +19,7 @@ export default function SectionExamples() {
   return (
     <div className={classes.section}>
       <div className={classes.container}>
-        <GridContainer justify="center">
+        <GridContainer justifyContent="center">
           <GridItem xs={12} sm={12} md={6}>
             <Link href="/landing" className={classes.link}>
                 <img

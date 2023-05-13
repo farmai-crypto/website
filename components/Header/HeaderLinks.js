@@ -2,17 +2,17 @@
 import React from "react";
 import Link from "next/link";
 
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
-import Icon from "@material-ui/core/Icon";
+// @mui components
+import { makeStyles } from "@mui/styles";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import Tooltip from "@mui/material/Tooltip";
+import Icon from "@mui/material/Icon";
 
-// @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons";
-import DeleteIcon from "@material-ui/icons/Delete";
-import IconButton from "@material-ui/core/IconButton";
+// @mui/icons-material
+import { Apps, CloudDownload } from "@mui/icons-material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import IconButton from "@mui/material/IconButton";
 
 // core components
 import CustomDropdown from "/components/CustomDropdown/CustomDropdown.js";

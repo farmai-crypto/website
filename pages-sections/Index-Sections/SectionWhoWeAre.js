@@ -1,18 +1,18 @@
 import React from "react";
 // plugin that creates slider
 import Slider from "nouislider";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Radio from "@material-ui/core/Radio";
-import Switch from "@material-ui/core/Switch";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import People from "@material-ui/icons/People";
-import Check from "@material-ui/icons/Check";
-import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
+// @mui components
+import { makeStyles } from "@mui/styles";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Radio from "@mui/material/Radio";
+import Switch from "@mui/material/Switch";
+// @mui/icons-material
+import Favorite from "@mui/icons-material/Favorite";
+import People from "@mui/icons-material/People";
+import Check from "@mui/icons-material/Check";
+import FiberManualRecord from "@mui/icons-material/FiberManualRecord";
 // core components
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
@@ -23,44 +23,66 @@ import Paginations from "/components/Pagination/Pagination.js";
 import Badge from "/components/Badge/Badge.js";
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/whoWeAreStyle.js";
-import { Grid , Typography} from "@material-ui/core";
+import { Grid , Stack, Typography} from "@mui/material";
 import Image from "next/image";
 import MemberCard from "../../components/Card/MemberCard";
 import ContentBox from "../../components/ContentBox/ContentBox";
 import { Listing, ListingItem } from "../../components/Listing/Listing";
 import Circle from "../../components/Icons/Circle";
+import { Grade, School, Star, Whatshot } from "@mui/icons-material";
 
 const useStyles = makeStyles(styles);
 
-const InactiveListItem = ({title}) => {
-  return <ListingItem iconStyle={{minWidth: 0, paddingRight: "8px"}} icon={<Circle style={{fill: "rgb(110 107 100 / 60%)", width: "16px", height: "16px"}} />} style={{padding: 0}} textStyle={{fontSize: "10px"}} text={title} />
+const BaseListItem = ({icon, title}) => {
+  return <ListingItem iconStyle={{minWidth: 0, paddingRight: "8px"}} icon={icon} textStyle={{fontSize: "0.9rem"}} text={title} />
+}
+
+const MemberCapabilityListItem = ({title}) => {
+  return <BaseListItem icon={<Star style={{fill: "rgb(203 137 55)", width: "16px", height: "16px"}} />} title={title} />
+}
+
+const MemberQuote = ({quote, name}) => {
+  return (
+    <Stack direction="row">
+      <span>
+        <span style={{fontStyle: "italic"}}>{quote}</span> - {name}
+      </span>
+    </Stack>
+  )
 }
 
 export default function SectionWhoWeAre() {
-  const classes = useStyles();
-  
   return (
-    <ContentBox id="who-we-are" title="Who we are">
-      <Grid container justify="center">
-        <Grid item container justify="space-evenly" spacing={2}>
-          <Grid item xs={6}>
+    <ContentBox id="who-we-are" title="Team">
+      <Grid container justifyContent="center">
+        <Grid item container justifyContent="space-evenly" spacing={2}>
+          <Grid item xs={12} sm={6}>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
               <MemberCard image="/img/people/kojo.png" title="Kojo">
-                Project founder and CEO
+                <p>Project founder and CEO</p>
+                <Listing>
+                  <MemberCapabilityListItem title="Fact about Kojo #1" />
+                  <MemberCapabilityListItem title="Fact about Kojo #2" />
+                  <MemberCapabilityListItem title="Fact about Kojo #3" />
+                  <MemberCapabilityListItem title="Fact about Kojo #4" />
+                  <MemberCapabilityListItem title="Fact about Kojo #5" />
+                </Listing>
+                <MemberQuote quote="Fancy quote" name="Kojo" />
               </MemberCard>
             </div>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
               <MemberCard image="/img/people/trickz.png" title="Dominik">
-                Blockchain developer and CIO
+                <p>Blockchain developer and CIO</p>
                 <Listing>
-                  <InactiveListItem title="Prototype development" />
-                  <InactiveListItem title="Top tier CEX Listings" />
-                  <InactiveListItem title="Global Partnerships (Governments)" />
-                  <InactiveListItem title="Continuous team expansion" />
-                  <InactiveListItem title="Major Fundraisers (Top tier investors)" />
+                  <MemberCapabilityListItem title="+3 years experience in crypto" />
+                  <MemberCapabilityListItem title="+12 years experience in software development" />
+                  <MemberCapabilityListItem title="Tech nerd" />
+                  <MemberCapabilityListItem title="Website & Smart Contract developer" />
+                  <MemberCapabilityListItem title="Farm AI core team" />
                 </Listing>
+                <MemberQuote quote="Fancy quote" name="Dominik" />
               </MemberCard>
             </div>
           </Grid>

@@ -1,5 +1,5 @@
 
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
 import { getPriorityConnector, initializeConnector } from "@web3-react/core";
 import { MetaMask } from "@web3-react/metamask";
 import { WalletConnect } from "@web3-react/walletconnect";
@@ -38,6 +38,7 @@ const activeProvider = () => {
 }
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/uniswapWidgetStyle.js";
+import styled from "@emotion/styled";
 const useStyles = makeStyles(styles);
 
 const UniswapWidget = () => {

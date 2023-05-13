@@ -1,18 +1,18 @@
 import React from "react";
 // plugin that creates slider
 import Slider from "nouislider";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Radio from "@material-ui/core/Radio";
-import Switch from "@material-ui/core/Switch";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import People from "@material-ui/icons/People";
-import Check from "@material-ui/icons/Check";
-import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
+// @mui components
+import { makeStyles } from "@mui/styles";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Radio from "@mui/material/Radio";
+import Switch from "@mui/material/Switch";
+// @mui/icons-material
+import Favorite from "@mui/icons-material/Favorite";
+import People from "@mui/icons-material/People";
+import Check from "@mui/icons-material/Check";
+import FiberManualRecord from "@mui/icons-material/FiberManualRecord";
 // core components
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
@@ -82,7 +82,7 @@ export default function SectionBasics() {
               <small>Pick your style</small>
             </h3>
           </div>
-          <GridContainer justify="center">
+          <GridContainer justifyContent="center">
             <GridItem xs={12} sm={12} md={8}>
               <Button color="primary">Default</Button>
               <Button color="primary" round>
@@ -104,7 +104,7 @@ export default function SectionBasics() {
               <small>Pick your size</small>
             </h3>
           </div>
-          <GridContainer justify="center">
+          <GridContainer justifyContent="center">
             <GridItem xs={12} sm={12} md={8}>
               <Button color="primary" size="sm">
                 Small
@@ -120,7 +120,7 @@ export default function SectionBasics() {
               <small>Pick your color</small>
             </h3>
           </div>
-          <GridContainer justify="center">
+          <GridContainer justifyContent="center">
             <GridItem xs={12} sm={12} md={8}>
               <Button>Default</Button>
               <Button color="primary">Primary</Button>

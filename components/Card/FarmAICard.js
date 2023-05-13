@@ -1,6 +1,6 @@
 import React from "react";
 // material-ui components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/styles";
 // core components
 import Card from "/components/Card/Card.js";
 import CardBody from "/components/Card/CardBody.js";

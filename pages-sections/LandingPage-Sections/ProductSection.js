@@ -1,11 +1,11 @@
 import React from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+// @mui components
+import { makeStyles } from "@mui/styles";
 
-// @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+// @mui/icons-material
+import Chat from "@mui/icons-material/Chat";
+import VerifiedUser from "@mui/icons-material/VerifiedUser";
+import Fingerprint from "@mui/icons-material/Fingerprint";
 // core components
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
@@ -19,7 +19,7 @@ export default function ProductSection() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
-      <GridContainer justify="center">
+      <GridContainer justifyContent="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Let{"'"}s talk product</h2>
           <h5 className={classes.description}>

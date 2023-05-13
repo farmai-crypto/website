@@ -5,23 +5,23 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 // material-ui components
-import { createMuiTheme, ThemeProvider, makeStyles, MuiThemeProvider } from "@material-ui/core/styles";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Icon from "@material-ui/core/Icon";
+import { MuiThemeProvider, makeStyles, styled } from "@mui/styles";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Icon from "@mui/material/Icon";
 // core components
 import Card from "/components/Card/Card.js";
 import CardBody from "/components/Card/CardBody.js";
 import CardHeader from "/components/Card/CardHeader.js";
 
 import styles from "/styles/jss/nextjs-material-kit/components/customTabsStyle.js";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-import { useMediaQuery } from "@material-ui/core";
+import createBreakpoints from "@mui/system/createTheme/createBreakpoints";
+import { ThemeProvider, createTheme, useMediaQuery } from "@mui/material";
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(() => styles);
 const breakpoints = createBreakpoints({});
 
-const theme = createMuiTheme({
+const theme = createTheme({
   overrides: {
     // Name of the component
     MuiTabs: {
@@ -55,7 +55,7 @@ export default function CustomTabs(props) {
     <Card plain={plainTabs}>
       <CardHeader color={headerColor} plain={plainTabs}>
         {title !== undefined ? <div className={cardTitle}>{title}</div> : null}
-        <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
           <Tabs
             value={value}
             onChange={handleChange}
@@ -91,7 +91,7 @@ export default function CustomTabs(props) {
               );
             })}
           </Tabs>
-        </MuiThemeProvider>
+        </ThemeProvider>
       </CardHeader>
       <CardBody>
         {

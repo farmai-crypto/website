@@ -1,6 +1,6 @@
 import React from "react";
 // material-ui components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/styles";
 // core components
 import Card from "/components/Card/Card.js";
 import CardBody from "/components/Card/CardBody.js";
@@ -9,7 +9,7 @@ import Button from "/components/CustomButtons/Button.js";
 import imagesStyles from "/styles/jss/nextjs-material-kit/imagesStyles.js";
 
 import { cardTitle } from "/styles/jss/nextjs-material-kit.js";
-import { Grid } from "@material-ui/core";
+import { Grid, Stack } from "@mui/material";
 
 const styles = {
   ...imagesStyles,
@@ -20,21 +20,22 @@ const useStyles = makeStyles(styles);
 
 export default function MemberCard({image, title, children}) {
   const classes = useStyles();
+  console.log(children);
   return (
     <Card>
-      <Grid container>
-        <Grid item xs={6}>
+      <Grid container flexDirection={{xs: "column", sm: "row"}}>
+        <Grid item xs={12} lg={5}>
           <img
-          style={{height: "320px", display: "block", backgroundColor: "rgb(80 145 191)", padding: "10px", objectFit: "contain"}}
+          style={{height: "320px", display: "block", backgroundColor: "rgb(80 145 191)", padding: "10px", objectFit: "contain", borderRadius: "5px 0px 0px 5px"}}
           className={classes.imgCardTop}
           src={image}
           alt="Card-img-cap"
         />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} lg={7}>
           <CardBody>
             <h4 className={classes.cardTitle}>{title}</h4>
-            <p>{children}</p>
+            <Stack>{children}</Stack>
           </CardBody>
         </Grid>
       </Grid>

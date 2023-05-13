@@ -1,12 +1,12 @@
 import { useRef, useEffect, React } from "react";
 // plugin that creates slider
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
+// @mui components
+import { makeStyles } from "@mui/styles";
+// @mui/icons-material
 // core components
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/howToBuyStyle.js";
-import { Chip, Grid, Typography } from "@material-ui/core";
+import { Chip, Grid, Typography } from "@mui/material";
 import Button from "/components/CustomButtons/Button.js";
 
 import Chart from 'chart.js/auto';
@@ -30,12 +30,12 @@ const allStyles = {
 const useStyles = makeStyles(allStyles);
 
 // Tokenomics data
-// @material-ui/icons
+// @mui/icons-material
 import FarmAICard from "../../components/Card/FarmAICard";
 import UniswapWidget from "../../components/web3/UniswapWidget";
 import ContentBox from "../../components/ContentBox/ContentBox";
 import { Listing, ListingItem } from "../../components/Listing/Listing";
-import { School , HourglassFull, MonetizationOn, Code, Face, Chat, Build, Assessment, Opacity} from "@material-ui/icons";
+import { School , HourglassFull, MonetizationOn, Code, Face, Chat, Build, Assessment, Opacity} from "@mui/icons-material";
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import CustomTabs from '../../components/CustomTabs/CustomTabs';
@@ -221,7 +221,7 @@ export default function SectionHowToBuy() {
   
   return (
     <ContentBox id="how-to-buy" title="How to buy">
-      <Grid container justify="center">
+      <Grid container justifyContent="center">
         <Grid item container xs={12} md={6}>
           <Grid item>
             <h3 style={{marginTop: 0}}>Participating in FarmAI</h3>

@@ -1,8 +1,8 @@
 import React from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+// @mui components
+import { makeStyles } from "@mui/styles";
 
-// @material-ui/icons
+// @mui/icons-material
 
 // core components
 import GridContainer from "/components/Grid/GridContainer.js";
@@ -18,7 +18,7 @@ export default function WorkSection() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
-      <GridContainer justify="center">
+      <GridContainer justifyContent="center">
         <GridItem cs={12} sm={12} md={8}>
           <h2 className={classes.title}>Work with us</h2>
           <h4 className={classes.description}>

@@ -1,18 +1,18 @@
 import React from "react";
 // plugin that creates slider
 import Slider from "nouislider";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Radio from "@material-ui/core/Radio";
-import Switch from "@material-ui/core/Switch";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import People from "@material-ui/icons/People";
-import Check from "@material-ui/icons/Check";
-import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
+// @mui components
+import { makeStyles } from "@mui/styles";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Radio from "@mui/material/Radio";
+import Switch from "@mui/material/Switch";
+// @mui/icons-material
+import Favorite from "@mui/icons-material/Favorite";
+import People from "@mui/icons-material/People";
+import Check from "@mui/icons-material/Check";
+import FiberManualRecord from "@mui/icons-material/FiberManualRecord";
 // core components
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
@@ -23,12 +23,12 @@ import Paginations from "/components/Pagination/Pagination.js";
 import Badge from "/components/Badge/Badge.js";
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/whatWeDoStyle.js";
-import { Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@material-ui/core";
+import { Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import Image from "next/image";
 
 import farmingSky from "/public/img/sections/what-we-do/farm-sky.jpg";
 import ContentBox from "../../components/ContentBox/ContentBox";
-import { Landscape, Memory, Timelapse } from "@material-ui/icons";
+import { Landscape, Memory, Timelapse } from "@mui/icons-material";
 
 import { Listing, ListingItem } from "../../components/Listing/Listing";
 import Ethereum from "../../components/Icons/Ethereum";
@@ -85,7 +85,6 @@ export default function SectionWhatWeDo() {
             </p>
           </Grid>
           <Grid item xs={12}>
-            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
               <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="500">
                 <Listing>
                   <ListingItem icon={<Landscape style={{color: "#28946e"}} />} text="Autonomous agriculture" />
@@ -94,7 +93,6 @@ export default function SectionWhatWeDo() {
                   <ListingItem icon={<Ethereum style={{color: "#28946e", fill: "currentColor"}} />} text="Blockchain-based payment solution $FAI" />
                 </Listing>
               </div>
-            </List>
           </Grid>
           <Grid item className={classes.centerSmall}>
             <div data-aos="fade-right" data-aos-duration="500">
@@ -102,7 +100,7 @@ export default function SectionWhatWeDo() {
             </div>
           </Grid>
         </Grid>
-        <Grid item container sm={5} lg={4} xs={12} justify="flex-end">
+        <Grid item container sm={5} lg={4} xs={12} justifyContent="flex-end">
           <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="500">
             <Image src={farmingSky} id="img-farm-sky" width={300} style={{opacity: "0.9", borderRadius: "5px", maxWidth: "100%"}} alt="farming-hands" className={classes.centerSmall} />
           </div>

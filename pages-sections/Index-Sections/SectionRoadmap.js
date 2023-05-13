@@ -1,12 +1,12 @@
 import { useRef, useEffect, React } from "react";
 // plugin that creates slider
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
+// @mui components
+import { makeStyles } from "@mui/styles";
+// @mui/icons-material
 // core components
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/howToBuyStyle.js";
-import { Card, CardActionArea, CardContent, CardMedia, Chip, Divider, Grid, Typography } from "@material-ui/core";
+import { Card, CardActionArea, CardContent, CardMedia, Chip, Divider, Grid, Typography } from "@mui/material";
 import Button from "/components/CustomButtons/Button.js";
 
 import Chart from 'chart.js/auto';
@@ -30,12 +30,12 @@ const allStyles = {
 const useStyles = makeStyles(allStyles);
 
 // Tokenomics data
-// @material-ui/icons
+// @mui/icons-material
 import FarmAICard from "../../components/Card/FarmAICard";
 import UniswapWidget from "../../components/web3/UniswapWidget";
 import ContentBox from "../../components/ContentBox/ContentBox";
 import { Listing, ListingItem } from "../../components/Listing/Listing";
-import { School , HourglassFull, MonetizationOn, Code, Face, Chat, Build, Assessment, Opacity, Check, Lens, HourglassEmpty} from "@material-ui/icons";
+import { School , HourglassFull, MonetizationOn, Code, Face, Chat, Build, Assessment, Opacity, Check, Lens, HourglassEmpty} from "@mui/icons-material";
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import CustomTabs from '../../components/CustomTabs/CustomTabs';
@@ -146,7 +146,7 @@ export default function SectionRoadmap() {
   
   return (
     <ContentBox id="how-to-buy" title="FarmAI's Roadmap">
-      <Grid container justify="center" spacing={2}>
+      <Grid container justifyContent="center" spacing={2}>
         <Grid item xs={12} lg={4}>
           <PhaseOne />
         </Grid>
