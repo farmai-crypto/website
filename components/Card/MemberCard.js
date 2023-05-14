@@ -26,7 +26,13 @@ export default function MemberCard({image, title, children}) {
       <Grid container flexDirection={{xs: "column", sm: "row"}}>
         <Grid item xs={12} lg={5}>
           <img
-          style={{height: "320px", display: "block", backgroundColor: "rgb(80 145 191)", padding: "10px", objectFit: "contain", borderRadius: "5px 0px 0px 5px"}}
+          style={{
+            height: "320px", display: "block", backgroundColor: "rgb(21 80 121 / 95%)", padding: "10px", 
+            objectFit: "contain", 
+            borderRadius: {
+              xs: "5px 5px 0px 0px",
+              sm: "5px 0px 0px 5px"
+            }}}
           className={classes.imgCardTop}
           src={image}
           alt="Card-img-cap"
