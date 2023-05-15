@@ -14,6 +14,8 @@
 
  */
 
+import { Nunito } from "next/font/google";
+
 // ##############################
 // // // Variables - Styles that are used on more than one component
 // #############################
@@ -84,8 +86,9 @@ const card = {
   background: "#fff",
 };
 
+const nunito = Nunito({ subsets: ['latin'], fallback: ['"Roboto", "Helvetica", "Arial", sans-serif']});
 const defaultFont = {
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  fontFamily: `${nunito.style.fontFamily}`,
   fontWeight: "300",
   lineHeight: "1.5em",
 };

@@ -1,7 +1,9 @@
+import { Nunito } from "next/font/google";
 import { container, title } from "/styles/jss/nextjs-material-kit.js";
 
 import imagesStyles from "/styles/jss/nextjs-material-kit/imagesStyles.js";
 
+const nunito = Nunito({ subsets: ['latin'], fallback: ['"Roboto", "Helvetica", "Arial", sans-serif']});
 const typographyStyle = {
   section: {
     padding: "70px 0"
@@ -24,7 +26,7 @@ const typographyStyle = {
     width: "100%"
   },
   note: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: nunito.style.fontFamily,
     bottom: "10px",
     color: "#c0c1c2",
     display: "block",

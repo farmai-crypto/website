@@ -1,3 +1,6 @@
+import { Nunito } from "next/font/google";
+
+const nunito = Nunito({ subsets: ['latin'], fallback: ['"Roboto", "Helvetica", "Arial", sans-serif']});
 const popoverStyles = {
   popover: {
     padding: "0",
@@ -9,7 +12,7 @@ const popoverStyles = {
     borderRadius: "3px",
     display: "block",
     maxWidth: "276px",
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: `${nunito.style.fontFamily}`,
     fontStyle: "normal",
     fontWeight: "400",
     textAlign: "start",

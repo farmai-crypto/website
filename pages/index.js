@@ -46,7 +46,31 @@ const useStyles = makeStyles(() => ({
   ...styles
 }));
 
-const theme = createTheme();
+const theme = createTheme({
+  components: {
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          fontFamily: nunito.style.fontFamily
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontFamily: nunito.style.fontFamily
+        }
+      }
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          fontFamily: nunito.style.fontFamily
+        }
+      }
+    }
+  }
+});
 
 const MainApp = ({props}) => {
   const classes = useStyles();

@@ -227,13 +227,10 @@ export default function SectionHowToBuy() {
         <Grid item container xs={12} md={6}>
           <Grid item>
             <h3 style={{marginTop: 0}}>Participating in FarmAI</h3>
-          </Grid>
-          <Grid item>
             <p style={{fontSize: "1rem"}}>
               To take a step forward and get yourself a share of #FAI, you can invest into our token via the Uniswap widget or by clicking on the button below.
               We have a lot to provide for the future, so joining our community is key to staying updated and entering early allows to you to grow big profits over the course of our project.
-              Want to get a small introduction into your benefits joining us? <br />
-              We got you.
+              Want to get a small introduction into your benefits joining us? We got you.
             </p>
           </Grid>
           <div data-aos="fade-right" data-aos-duration="500">
