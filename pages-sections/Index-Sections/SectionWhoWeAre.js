@@ -56,7 +56,7 @@ export default function SectionWhoWeAre() {
     <ContentBox id="who-we-are" title="Team">
       <Grid container justifyContent="center">
         <Grid item container justifyContent="space-evenly" spacing={2}>
-          <Grid item xs={12} sm={9} xl={6}>
+          <Grid item xs={12} sm={8} xl={6}>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
               <MemberCard image="/img/people/kojo.png" title="Kojo">
                 <p>Project founder and CEO</p>
@@ -71,7 +71,7 @@ export default function SectionWhoWeAre() {
               </MemberCard>
             </div>
           </Grid>
-          <Grid item xs={12} sm={9} xl={6}>
+          <Grid item xs={12} sm={8} xl={6}>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
               <MemberCard image="/img/people/trickz.png" title="Dominik">
                 <p>Blockchain developer and CIO</p>

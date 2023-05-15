@@ -224,7 +224,7 @@ export default function SectionHowToBuy() {
   return (
     <ContentBox id="how-to-buy" title="How to buy">
       <Grid container justifyContent="center">
-        <Grid item container xs={12} md={6}>
+        <Grid item container xs={12} md={6} alignContent="flex-start">
           <Grid item>
             <h3 style={{marginTop: 0}}>Participating in FarmAI</h3>
             <p style={{fontSize: "1rem"}}>
@@ -260,12 +260,12 @@ export default function SectionHowToBuy() {
             <h3>Tokenomics</h3>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} lg={6}>
           <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
             <Charts />
             </div>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} lg={6}>
           <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
             <Tokenomics />
             </div>

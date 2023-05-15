@@ -147,17 +147,17 @@ export default function SectionRoadmap() {
   return (
     <ContentBox id="how-to-buy" title="FarmAI's Roadmap">
       <Grid container justifyContent="center" spacing={2}>
-        <Grid item xs={12} lg={4}>
+        <Grid item xs={12} sm={8} lg={4}>
           <div data-aos="fade-up" data-aos-duration="400" data-aos-offset="200" data-aos-delay="200" style={{height: "100%"}}>
           <PhaseOne />
           </div>
         </Grid>
-        <Grid item xs={12} lg={4}>
+        <Grid item xs={12} sm={8} lg={4}>
           <div data-aos="fade-up" data-aos-duration="400" data-aos-offset="200" data-aos-delay="400" style={{height: "100%"}}>
             <PhaseTwo />
           </div>
         </Grid>
-        <Grid item xs={12} lg={4}>
+        <Grid item xs={12} sm={8} lg={4}>
           <div data-aos="fade-up" data-aos-duration="400" data-aos-offset="200" data-aos-delay="700" style={{height: "100%"}}>
             <PhaseThree />
           </div>
