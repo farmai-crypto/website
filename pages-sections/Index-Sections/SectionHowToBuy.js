@@ -258,19 +258,21 @@ export default function SectionHowToBuy() {
           </div>
         </Grid>
         <Grid item container xs={12}>
-          <div data-aos="fade-up" data-aos-duration="750" data-aos-offset="350">
-            <Grid item container xs={12}>
-              <Grid item xs={12} style={{marginBottom: "1rem"}}>
-                <h3>Tokenomics</h3>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Charts />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Tokenomics />
-              </Grid>
-            </Grid>
-          </div>
+          <Grid item xs={12} style={{marginBottom: "1rem"}}>
+          <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
+            <h3>Tokenomics</h3>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+          <div data-aos="fade-right" data-aos-duration="500" data-aos-offset="300">
+            <Charts />
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+          <div data-aos="fade-left" data-aos-duration="500" data-aos-offset="300">
+            <Tokenomics />
+            </div>
+          </Grid>
         </Grid>
       </Grid>
     </ContentBox>
