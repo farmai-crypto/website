@@ -264,12 +264,12 @@ export default function SectionHowToBuy() {
             </div>
           </Grid>
           <Grid item xs={12} sm={6}>
-          <div data-aos="fade-right" data-aos-duration="500" data-aos-offset="300">
+          <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
             <Charts />
             </div>
           </Grid>
           <Grid item xs={12} sm={6}>
-          <div data-aos="fade-left" data-aos-duration="500" data-aos-offset="300">
+          <div data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
             <Tokenomics />
             </div>
           </Grid>
