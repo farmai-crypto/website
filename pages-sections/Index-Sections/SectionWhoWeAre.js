@@ -89,7 +89,7 @@ export default function SectionWhoWeAre() {
         </Grid>
         <Grid item>
           <Typography>
-            You can count on many years of experience in the crypto field from our side which is why we thought of bringing it together within this project.
+            You can count on many years of experience in the blockchain field from our side which is why we thought of bringing it together within this project.
             Our combined force of deep blockchain knowledge as well as the possibility to develop everything on our own will lead us to success.
           </Typography>
         </Grid>
