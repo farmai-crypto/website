@@ -215,11 +215,18 @@ const Charts = () => {
   );
 }
 
+const UniswapBuyButton = (props) => {
+  const farmAITokenAddress = "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984";
+  const uniswapSwapAddress = `https://app.uniswap.org/#/tokens/ethereum/${farmAITokenAddress}`;
+  const isDisabled = true;
+
+  return (
+    <Button href={uniswapSwapAddress} target="_blank" disabled={isDisabled} {...props}>Buy on Uniswap</Button>
+  )
+}
 
 export default function SectionHowToBuy() {
   const classes = useStyles();
-  const farmAITokenAddress = "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984";
-  const uniswapSwapAddress = `https://app.uniswap.org/#/tokens/ethereum/${farmAITokenAddress}`;
   
   return (
     <ContentBox id="how-to-buy" title="How to buy">
@@ -238,12 +245,12 @@ export default function SectionHowToBuy() {
                 <Listing>
                   <ListingItem icon={<School  style={{color: "#28946e"}} />} text="Professional team with multiple years of experience" />
                   <ListingItem icon={<HourglassFull  style={{color: "#28946e"}} />} text="Long-term project that builds to stay" />
-                  <ListingItem icon={<MonetizationOn  style={{color: "#28946e"}} />} text="Automatic reward system benefiting holders for their investment" />
+                  <ListingItem icon={<MonetizationOn  style={{color: "#28946e"}} />} text="Auto-liquidity to keep project healthy" />
                   <ListingItem icon={<Code  style={{color: "#28946e"}} />} text="In-house quality software development" />
                 </Listing>
             </Grid>
             <Grid item xs={12} className={classes.centerSmall}>
-              <Button className={classes.uniswapBuyButton} href={uniswapSwapAddress} target="_blank">Buy on Uniswap</Button>
+              <UniswapBuyButton className={classes.uniswapBuyButton} />
             </Grid>
           </div>
         </Grid>
