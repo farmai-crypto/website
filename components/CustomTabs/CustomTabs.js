@@ -66,7 +66,7 @@ export default function CustomTabs(props) {
       <CardHeader color={headerColor} plain={plainTabs}>
         {title !== undefined ? <div className={cardTitle}>{title}</div> : null}
         <ThemeProvider theme={theme}>
-          <StyledTabs
+          <Tabs
             value={value}
             onChange={handleChange}
             classes={{
@@ -100,7 +100,7 @@ export default function CustomTabs(props) {
                 />
               );
             })}
-          </StyledTabs>
+          </Tabs>
         </ThemeProvider>
       </CardHeader>
       <CardBody>

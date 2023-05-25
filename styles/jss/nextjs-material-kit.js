@@ -231,6 +231,12 @@ const cardTitle = {
   marginBottom: "0.3rem"
 };
 
+const whatWeDoCardTitle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between"
+};
+
 const cardLink = {
   "& + $cardLink": {
     marginLeft: "1.25rem",
@@ -285,6 +291,7 @@ export {
   defaultBoxShadow,
   title,
   cardTitle,
+  whatWeDoCardTitle,
   cardLink,
   cardSubtitle,
   farmAIButton

@@ -6,7 +6,7 @@ const ListItemTheme = createTheme(() => {
 
 const ListingItem = ({iconStyle, icon, textStyle, text, style}) => {
   return (
-    <ListItem disablePadding="true" style={style}>
+    <ListItem disablePadding={true} style={style}>
       <ListItemIcon style={iconStyle}>
         {icon}
       </ListItemIcon>

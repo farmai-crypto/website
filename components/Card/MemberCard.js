@@ -4,7 +4,6 @@ import { makeStyles } from "@mui/styles";
 // core components
 import Card from "/components/Card/Card.js";
 import CardBody from "/components/Card/CardBody.js";
-import Button from "/components/CustomButtons/Button.js";
 
 import imagesStyles from "/styles/jss/nextjs-material-kit/imagesStyles.js";
 
@@ -20,7 +19,6 @@ const useStyles = makeStyles(styles);
 
 export default function MemberCard({image, title, children}) {
   const classes = useStyles();
-  console.log(children);
   return (
     <Card>
       <Grid container flexDirection={{xs: "column", sm: "row"}}>

@@ -1,38 +1,20 @@
 import React from "react";
 // plugin that creates slider
-import Slider from "nouislider";
 // @mui components
 import { makeStyles } from "@mui/styles";
-import InputAdornment from "@mui/material/InputAdornment";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Radio from "@mui/material/Radio";
-import Switch from "@mui/material/Switch";
 // @mui/icons-material
-import Favorite from "@mui/icons-material/Favorite";
-import People from "@mui/icons-material/People";
-import Check from "@mui/icons-material/Check";
-import FiberManualRecord from "@mui/icons-material/FiberManualRecord";
 // core components
-import GridContainer from "/components/Grid/GridContainer.js";
-import GridItem from "/components/Grid/GridItem.js";
 import Button from "/components/CustomButtons/Button.js";
-import CustomInput from "/components/CustomInput/CustomInput.js";
-import CustomLinearProgress from "/components/CustomLinearProgress/CustomLinearProgress.js";
-import Paginations from "/components/Pagination/Pagination.js";
-import Badge from "/components/Badge/Badge.js";
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/whatWeDoStyle.js";
-import { Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Image from "next/image";
+import { Grid } from "@mui/material";
 
-import farmingSky from "/public/img/sections/what-we-do/farm-sky.jpg";
 import ContentBox from "../../components/ContentBox/ContentBox";
-import { Landscape, Memory, Timelapse } from "@mui/icons-material";
+import { Landscape, Memory } from "@mui/icons-material";
 
-import { Listing, ListingItem } from "../../components/Listing/Listing";
 import Ethereum from "../../components/Icons/Ethereum";
 import Monitoring from "../../components/Icons/Monitoring";
+import WhatWeDoCard from "../../components/Card/WhatWeDoCard";
 
 const allStyles = {
   centerSmall: {
@@ -66,44 +48,40 @@ export default function SectionWhatWeDo() {
   return (
     <ContentBox id="what-we-do" title="Farming meets AI" className={[classes.mainContainer, "what-we-do"].join(" ")}>
       <Grid container spacing={2} className={classes.container}>
-        <Grid container item sm={7} lg={8} xs={12}>
-          <Grid item xs={12}>
-            <p style={{fontSize: "1rem"}}>
-            Farm AI is an AI-focused technology company that is committed to revolutionizing agriculture through the use of data-driven insights powered by artificial intelligence solutions.
+        <Grid item xs={12} sm={12} md={6} xl={3}>
+          <WhatWeDoCard background="/img/sections/what-we-do/autonomous-agriculture.jpg" icon={<Landscape style={{color: "#28946e"}} />} title="Autonomous agriculture">
+            Farm AI is an AI-focused technology company that is committed to revolutionizing agriculture through the use of data-driven insights powered by autonomous, artificial intelligence solutions.
             Our goal is to help farmers make smarter decisions that lead to higher yields, reduced costs, and increased sustainability.
             With the global population on the rise, it has become more important than ever to find innovative solutions that can feed our growing world while protecting our planet.
-            <br /><br />
-            Our team of experts have a deep understanding of the challenges facing modern agriculture and we are dedicated to finding solutions that can help farmers achieve their goals.
-            Through AI-powered tools, Farm AI Solutions will empower farmers to monitor their crop health, predict growth accuracy, diagnose diseases, promote efficient water usage, and optimize farming schedules according to weather data.
-            By providing farmers with access to these insights, we help them to make more informed decisions that drive down costs and maximize yields.
-            <br /><br />
-            To further enhance the value of our ecosystem, we will integrate blockchain technology to provide a secure and transparent way to store and share data.
-            Our focus on data management, traceability, automated contract signing, supply chain management, and improved means of payment through our native cryptocurrency token, $FAI, enables us to create a trustworthy and efficient ecosystem for all participants.
-            <br /><br />
-            With $FAI, we are creating a new paradigm in agriculture, incentivizing contributors through a governance model that rewards long-term participation and contributes to the growth and sustainability of the ecosystem.
-            Our ecosystem is built on trust, transparency, and collaboration, and we are excited to be at the forefront of this revolutionary change.
-            </p>
-          </Grid>
-          <Grid item xs={12}>
-              <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="500">
-                <Listing>
-                  <ListingItem icon={<Landscape style={{color: "#28946e"}} />} text="Autonomous agriculture" />
-                  <ListingItem icon={<Memory style={{color: "#28946e"}} />} text="Next-gen technology" />
-                  <ListingItem icon={<Monitoring style={{color: "#28946e", fill: "currentColor"}} />} text="Blockchain-based data management" />
-                  <ListingItem icon={<Ethereum style={{color: "#28946e", fill: "currentColor"}} />} text="Blockchain-based payment solution $FAI" />
-                </Listing>
-              </div>
-          </Grid>
+          </WhatWeDoCard>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} xl={3}>
+          <WhatWeDoCard background="/img/sections/what-we-do/next-gen-technology.jpg" icon={<Memory style={{color: "#28946e"}} />} title="Next-gen technology">
+          Our team of experts have a deep understanding of the challenges facing modern agriculture.
+          Through AI-powered tools, Farm AI Solutions will empower farmers to monitor their crop health, predict growth accuracy, diagnose diseases, promote efficient water usage, and optimize farming schedules according to weather data.
+          By providing farmers with access to these insights, we help them to make more informed decisions that drive down costs and maximize yields.
+          </WhatWeDoCard>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} xl={3}>
+          <WhatWeDoCard background="/img/sections/what-we-do/blockchain-based-data.jpg" icon={<Monitoring style={{color: "#28946e", fill: "currentColor"}} />} title="Blockchain-based data">
+          To further enhance the value of our ecosystem, we will integrate blockchain technology to provide a secure and transparent way to store and share data.
+          Our focus on data management, traceability, automated contract signing and supply chain management leverage the decentralized storage of blockchains.
+          Together with our native cryptocurrency token, <strong>$FAI</strong>, we are able to create a trustworthy and efficient ecosystem for all participants that is accessible at any point in time.
+          </WhatWeDoCard>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} xl={3}>
+          <WhatWeDoCard background="/img/sections/what-we-do/blockchain-based-payment.jpg" icon={<Ethereum style={{color: "#28946e", fill: "currentColor"}} />} title="Blockchain-based payment">
+          With <strong>$FAI</strong>, we are creating a new paradigm in agriculture, incentivizing contributors through a governance model that rewards long-term participation and contributes to the growth and sustainability of the ecosystem.
+          As a first-class payment solution for our services, <strong>$FAI</strong> puts power and responsibility into our community to drive the future of FarmAI Solutions.
+          Our ecosystem is built on trust, transparency, and collaboration, and we are excited to be at the forefront of this revolutionary change.
+          </WhatWeDoCard>
+        </Grid>
+        <Grid container item sm={7} lg={8} xs={12}>
           <Grid item className={classes.centerSmall}>
             <div data-aos="fade-right" data-aos-duration="500">
               <Button className={classes.farmAIButton} href="/files/whitepaper.pdf" target="_blank">Read the whitepaper</Button>
             </div>
           </Grid>
-        </Grid>
-        <Grid item container sm={5} lg={4} xs={12} justifyContent="flex-end">
-          <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="500">
-            <Image src={farmingSky} id="img-farm-sky" width={300} style={{opacity: "0.9", borderRadius: "5px", maxWidth: "100%"}} alt="farming-hands" className={classes.centerSmall} />
-          </div>
         </Grid>
       </Grid>
     </ContentBox>

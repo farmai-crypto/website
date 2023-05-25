@@ -1,12 +1,13 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { ServerStyleSheets } from "@mui/styles";
+import { ServerStyleSheets, makeStyles } from "@mui/styles";
+
 
 class MyDocument extends Document {
   render() {
 
     return (
-      <Html lang="en" style={{scrollBehavior: "smooth"}}>
+      <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#000000" />

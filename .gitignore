@@ -27,3 +27,6 @@ yarn-error.log*
 /dist
 /.next
 pnpm-lock.yaml
+
+# Environment files
+.env

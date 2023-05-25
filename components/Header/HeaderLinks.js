@@ -15,7 +15,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 
 // core components
-import CustomDropdown from "/components/CustomDropdown/CustomDropdown.js";
 import Button from "/components/CustomButtons/Button.js";
 
 import styles from "/styles/jss/nextjs-material-kit/components/headerLinksStyle.js";

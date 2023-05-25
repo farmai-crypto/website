@@ -31,7 +31,6 @@ const useStyles = makeStyles(allStyles);
 
 // Tokenomics data
 // @mui/icons-material
-import FarmAICard from "../../components/Card/FarmAICard";
 import UniswapWidget from "../../components/web3/UniswapWidget";
 import ContentBox from "../../components/ContentBox/ContentBox";
 import { Listing, ListingItem } from "../../components/Listing/Listing";
@@ -40,6 +39,7 @@ import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import CustomTabs from '../../components/CustomTabs/CustomTabs';
 import { styled } from "@mui/system";
+import ContractAddressInfo from "../../components/web3/ContractAddressInfo";
 
 
 const Tokenomics = () => {
@@ -218,10 +218,17 @@ const Charts = () => {
 const UniswapBuyButton = (props) => {
   const farmAITokenAddress = "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984";
   const uniswapSwapAddress = `https://app.uniswap.org/#/tokens/ethereum/${farmAITokenAddress}`;
-  const isDisabled = true;
 
   return (
-    <Button href={uniswapSwapAddress} target="_blank" disabled={isDisabled} {...props}>Buy on Uniswap</Button>
+    <Button href={uniswapSwapAddress} target="_blank" {...props}>Buy on Uniswap</Button>
+  )
+}
+
+const PresaleButton = (props) => {
+  const presaleAddress = "https://www.pinksale.finance/launchpad/0xE6d033f9927391807cb0C41cF3270204b4b1cC6E?chain=ETH";
+
+  return (
+    <Button href={presaleAddress} target="_blank" {...props}>Enter presale on Pinksale</Button>
   )
 }
 
@@ -240,7 +247,7 @@ export default function SectionHowToBuy() {
               Want to get a small introduction into your benefits joining us? We got you.
             </p>
           </Grid>
-          <div data-aos="fade-right" data-aos-duration="500">
+          <div data-aos="fade-right" data-aos-duration="500" style={{width: "100%"}}>
             <Grid item>
                 <Listing>
                   <ListingItem icon={<School  style={{color: "#28946e"}} />} text="Professional team with multiple years of experience" />
@@ -250,7 +257,14 @@ export default function SectionHowToBuy() {
                 </Listing>
             </Grid>
             <Grid item xs={12} className={classes.centerSmall}>
-              <UniswapBuyButton className={classes.uniswapBuyButton} />
+              {
+                process.env.NEXT_PUBLIC_PRESALE_ACTIVE === "true" ?
+                 <PresaleButton className={classes.uniswapBuyButton} /> :
+                 <UniswapBuyButton className={classes.uniswapBuyButton} />
+              }
+            </Grid>
+            <Grid item xs={12} style={{marginTop: 10}}>
+              <ContractAddressInfo />
             </Grid>
           </div>
         </Grid>

@@ -68,7 +68,7 @@ export default function Header(props) {
   });
   const brandComponent = (
     <Link href="/" as="/">
-      <Image src="/img/farmai_header.png" width={48} height={48} />
+      <Image src="/img/farmai_header.png" width={48} height={48} alt="main-img" />
       <Button className={classes.title}>{brand}</Button>
     </Link>
   );
@@ -103,6 +103,7 @@ export default function Header(props) {
           variant="temporary"
           anchor={"right"}
           open={mobileOpen}
+          ModalProps={{ disableScrollLock: true }}
           classes={{
             paper: classes.drawerPaper
           }}

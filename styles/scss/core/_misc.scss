@@ -2,6 +2,12 @@ html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html {
+  @media(min-width: 900px) {
+    scroll-behavior: smooth
+  }
+}
 body {
   font-size: 1rem;
 }

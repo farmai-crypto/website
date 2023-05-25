@@ -1,4 +1,4 @@
-import { useRef, useEffect, React } from "react";
+import { React } from "react";
 // plugin that creates slider
 // @mui components
 import { makeStyles } from "@mui/styles";
@@ -6,11 +6,8 @@ import { makeStyles } from "@mui/styles";
 // core components
 
 import styles from "/styles/jss/nextjs-material-kit/pages/componentsSections/howToBuyStyle.js";
-import { Card, CardActionArea, CardContent, CardMedia, Chip, Divider, Grid, Typography } from "@mui/material";
-import Button from "/components/CustomButtons/Button.js";
+import { Card, CardActionArea, CardContent, CardMedia, Divider, Grid, Typography } from "@mui/material";
 
-import Chart from 'chart.js/auto';
-import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 
 const allStyles = {
@@ -31,14 +28,9 @@ const useStyles = makeStyles(allStyles);
 
 // Tokenomics data
 // @mui/icons-material
-import FarmAICard from "../../components/Card/FarmAICard";
-import UniswapWidget from "../../components/web3/UniswapWidget";
 import ContentBox from "../../components/ContentBox/ContentBox";
 import { Listing, ListingItem } from "../../components/Listing/Listing";
-import { School , HourglassFull, MonetizationOn, Code, Face, Chat, Build, Assessment, Opacity, Check, Lens, HourglassEmpty} from "@mui/icons-material";
-import GridContainer from '../../components/Grid/GridContainer';
-import GridItem from '../../components/Grid/GridItem';
-import CustomTabs from '../../components/CustomTabs/CustomTabs';
+import { Check} from "@mui/icons-material";
 import HourglassBottom from "../../components/Icons/HourglassBottom";
 import Circle from "../../components/Icons/Circle";
 
@@ -70,11 +62,11 @@ const PhaseOne = () => {
           </Typography>
           <Divider />
           <Listing>
-            <CheckedListItem title="Presale and stealth launch" />
+            <ActiveListItem title="Presale and stealth launch" />
             <CheckedListItem title="Website launch" />
-            <ActiveListItem title="Listing on coin sites" />
+            <InactiveListItem title="Listing on coin sites" />
             <ActiveListItem title="Team expansion" />
-            <ActiveListItem title="CMC and CG listings" />
+            <InactiveListItem title="CMC and CG listings" />
             <InactiveListItem title="Aggressive CEX Listings" />
             <InactiveListItem title="Promos and Partnerships" />
           </Listing>

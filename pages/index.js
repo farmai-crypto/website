@@ -13,18 +13,6 @@ import GridItem from "/components/Grid/GridItem.js";
 import Button from "/components/CustomButtons/Button.js";
 import Parallax from "/components/Parallax/Parallax.js";
 // sections for this page
-import SectionBasics from "/pages-sections/Components-Sections/SectionBasics.js";
-import SectionNavbars from "/pages-sections/Components-Sections/SectionNavbars.js";
-import SectionTabs from "/pages-sections/Components-Sections/SectionTabs.js";
-import SectionPills from "/pages-sections/Components-Sections/SectionPills.js";
-import SectionNotifications from "/pages-sections/Components-Sections/SectionNotifications.js";
-import SectionTypography from "/pages-sections/Components-Sections/SectionTypography.js";
-import SectionJavascript from "/pages-sections/Components-Sections/SectionJavascript.js";
-import SectionCarousel from "/pages-sections/Components-Sections/SectionCarousel.js";
-import SectionCompletedExamples from "/pages-sections/Components-Sections/SectionCompletedExamples.js";
-import SectionLogin from "/pages-sections/Components-Sections/SectionLogin.js";
-import SectionExamples from "/pages-sections/Components-Sections/SectionExamples.js";
-import SectionDownload from "/pages-sections/Components-Sections/SectionDownload.js";
 
 import styles from "/styles/jss/nextjs-material-kit/pages/index.js";
 
@@ -34,7 +22,6 @@ import { Grid, ThemeProvider, createTheme } from "@mui/material";
 import SectionWhatWeDo from "../pages-sections/Index-Sections/SectionWhatWeDo";
 import SectionHowToBuy from "../pages-sections/Index-Sections/SectionHowToBuy";
 import SectionWhoWeAre from "../pages-sections/Index-Sections/SectionWhoWeAre";
-import SectionServices from "../pages-sections/Index-Sections/SectionServices";
 import SectionSocials from "../pages-sections/Index-Sections/SectionSocials";
 import SectionRoadmap from "../pages-sections/Index-Sections/SectionRoadmap";
 const nunito = Nunito({ subsets: ['latin'], fallback: ['"Roboto", "Helvetica", "Arial", sans-serif']})
@@ -81,9 +68,7 @@ const MainApp = ({props}) => {
           html body * {
             font-family: ${nunito.style.fontFamily};
           };
-          html {
-            scroll-behavior: smooth;
-          }
+
         `}</style>
         <Header
           brand="Farm AI"
