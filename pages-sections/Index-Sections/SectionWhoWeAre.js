@@ -69,8 +69,27 @@ export default function SectionWhoWeAre() {
           </Grid>
           <Grid item xs={12} sm={8} xl={6}>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+              <MemberCard image="/img/people/ferly.jpg" title="Ferly">
+                <p>Marketing Agent for South East Asia</p>
+                <Listing>
+                  <MemberCapabilityListItem title="+5 years experience in blockchain markets" />
+                  <MemberCapabilityListItem title="Binance trader" />
+                  <MemberCapabilityListItem title="Online business" />
+                  <MemberCapabilityListItem title="Office administration" />
+                  <MemberCapabilityListItem title="Marketing expert" />
+                </Listing>
+                <MemberQuote quote="Life isn’t about finding yourself. Life is about creating yourself." name="Ferly" />
+              </MemberCard>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={8} xl={6}>
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
               <MemberCard image="/img/people/tamid.jpg" title="Tamid">
-                <p>Entrepreneur and Business Man</p>
+                <p>Liaison Western and Eastern African block</p>
+                <Listing>
+                  <MemberCapabilityListItem title="Entrepreneur" />
+                  <MemberCapabilityListItem title="Business Man" />
+                </Listing>
               </MemberCard>
             </div>
           </Grid>
