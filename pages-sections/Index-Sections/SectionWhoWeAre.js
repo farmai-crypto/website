@@ -67,6 +67,13 @@ export default function SectionWhoWeAre() {
               </MemberCard>
             </div>
           </Grid>
+          <Grid item xs={12} sm={8} xl={6}>
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100">
+              <MemberCard image="/img/people/tamid.jpg" title="Tamid">
+                <p>Entrepreneur and Business Man</p>
+              </MemberCard>
+            </div>
+          </Grid>
         </Grid>
         <Grid item>
           <Typography>
