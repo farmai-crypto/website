@@ -6,13 +6,20 @@ import { WalletConnect } from "@web3-react/walletconnect";
 
 import dynamic from 'next/dynamic'
 const SwapWidget = dynamic(
-  async() => {
+  async(props) => {
   const res = await import('@uniswap/widgets');
-  return res.SwapWidget;
+  
+  const Widget = res.SwapWidget;
+  return Widget;
   },
   {ssr: false}
   )
-const JSON_RPC_URL = 'https://cloudflare-eth.com';
+const JSON_RPC_URLS = [
+  'https://eth.llamarpc.com',
+  'https://ethereum.publicnode.com',
+  'https://rpc.payload.de',
+  'https://eth.meowrpc.com'
+];
 const metaMask = () => {
   const [connector, hooks] = initializeConnector((actions) => new MetaMask(actions, false));
   return [connector, hooks];
@@ -22,9 +29,7 @@ const walletConnect = () => {
     (actions) =>
       new WalletConnect(
         actions,
-        {
-          rpc: { 1: JSON_RPC_URL },
-        },
+        { rpc: { 1: JSON_RPC_URLS[0]}, },
         false
       )
   );
@@ -66,7 +71,7 @@ const UniswapWidget = (props) => {
   const UNI = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984';
   const presaleRunning = process.env.NEXT_PUBLIC_PRESALE_ACTIVE === "true";
   const Widget = () => <SwapWidget
-    jsonRpcEndpoint={JSON_RPC_URL}
+    jsonRpcUrlMap={{1: JSON_RPC_URLS}}
     tokenList={TOKEN_LIST}
     provider={provider}
     /*locale={locale}
