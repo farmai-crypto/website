@@ -259,7 +259,19 @@ export default function SectionHowToBuy() {
             <Grid item xs={12} className={classes.centerSmall}>
               {
                 process.env.NEXT_PUBLIC_PRESALE_ACTIVE === "true" ?
-                 <PresaleButton className={classes.uniswapBuyButton} /> :
+                 <>
+                  <PresaleButton className={classes.uniswapBuyButton} /> 
+                  <p>
+                    <strong>Earn ETH by PinkSale's Affiliate Program</strong>
+                  </p>
+                  <p>
+                    Our team is giving back a full <strong>5%</strong> of all raised funds to the affiliate pool program!<br />
+                    What does that mean for you?
+                    Go to our presale, scroll down and search for <strong><i>Affiliate Program</i></strong>, copy your affiliate link and earn ETH!
+                    For every member you acquired you will get a share of the ETH affiliate pool at the end of the presale.
+                    You literally earn money for sharing our project!
+                  </p>
+                 </>:
                  <UniswapBuyButton className={classes.uniswapBuyButton} />
               }
             </Grid>
