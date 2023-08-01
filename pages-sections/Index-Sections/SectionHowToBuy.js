@@ -216,8 +216,8 @@ const Charts = () => {
 }
 
 const UniswapBuyButton = (props) => {
-  const farmAITokenAddress = "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984";
-  const uniswapSwapAddress = `https://app.uniswap.org/#/tokens/ethereum/${farmAITokenAddress}`;
+  const farmAITokenAddress = "0x94553328D8A3189B6f47AA85cB77D03d76566148";
+  const uniswapSwapAddress = `https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=${farmAITokenAddress}`;
 
   return (
     <Button href={uniswapSwapAddress} target="_blank" {...props}>Buy on Uniswap</Button>
