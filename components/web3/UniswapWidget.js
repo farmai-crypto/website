@@ -68,7 +68,7 @@ const UniswapWidget = (props) => {
   const classes = useStyles();
   const provider = activeProvider();
   const TOKEN_LIST = 'https://gateway.ipfs.io/ipns/tokens.uniswap.org';
-  const UNI = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984';
+  const UNI = '0x94553328D8A3189B6f47AA85cB77D03d76566148';
   const presaleRunning = process.env.NEXT_PUBLIC_PRESALE_ACTIVE === "true";
   const Widget = () => <SwapWidget
     jsonRpcUrlMap={{1: JSON_RPC_URLS}}
